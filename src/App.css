@@ -1,0 +1,163 @@
+/* Coolhouse Theme - Import Google Fonts if needed */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-cool: #40c4ff;
+  --primary-dark: #0288d1;
+  --text-dark: #0d1b2a;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --success: #10b981;
+  --shadow-cool: 0 10px 30px rgba(64, 196, 255, 0.08);
+}
+
+@media (min-width: 992px) {
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-none.d-lg-flex {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .d-none.d-lg-flex {
+    display: none !important;
+  }
+  .d-lg-none {
+    display: flex !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.btn-primary,
+.btn-warning {
+  --bs-btn-bg: var(--primary-cool);
+  --bs-btn-border-color: var(--primary-cool);
+  --bs-btn-hover-bg: var(--primary-dark);
+  --bs-btn-hover-border-color: var(--primary-dark);
+  --bs-btn-active-bg: #0277bd;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow-cool);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(64, 196, 255, 0.12);
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.hero {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f8fafc 100%);
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  color: #111f5a;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+}
+
+.nav-link.active {
+  color: #111f5a !important;
+  font-weight: 500;
+  border-bottom: 3px solid #111f5a;
+}
+
+@media (max-width: 991.98px) {
+  .nav-link.active {
+    border-bottom: none !important;
+  }
+}
+.get-started-btn {
+  background-color: #111f5a !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 10px 28px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(55, 120, 212, 0.25) !important;
+}
+
+.get-started-btn:hover {
+  background-color: #111f5a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(55, 123, 212, 0.35) !important;
+}
+
+.navbar .get-started-btn {
+  margin-left: 1.5rem;
+}
+
+/* Snowflake accent decoration if wanted */
+.snowflake-accent::before {
+  content: '❆';
+  color: var(--primary-cool);
+  font-size: 2.8rem;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.map-container {
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  max-height: 700px; /* prevents it from becoming huge on very tall screens */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(64, 196, 255, 0.15);
+}
