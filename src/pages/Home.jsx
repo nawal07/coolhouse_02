@@ -116,7 +116,7 @@ function Home() {
       {/* Why Choose Us */}
       <section
         className="section py-5"
-        style={{ backgroundColor: 'var(--bg-light)' }}
+        style={{ backgroundColor: '#e6f2ff' }}
       >
         <Container>
           <h2 className="section-heading">Why Choose Coolhouse</h2>
@@ -190,7 +190,7 @@ function Home() {
       </section>
 
       {/* Core Services */}
-      <section className="section py-5">
+      <section className="section py-5 border-bottom" style={{ backgroundColor: 'var(--bg-light)' }} >
         <Container fluid className="px-4 px-md-5">
           <h2 className="section-heading">Our Core Services</h2>
           <p className="section-subheading">
@@ -300,8 +300,11 @@ function Home() {
             </Col>
           </Row>
 
-          <div className="text-center mt-5 pt-4">
-            <Button variant="primary" size="lg" className="px-4 py-2">
+          <div className=" text-center mt-5 pt-4">
+            <Button
+              size="md"
+              className= "service-btn"
+            >
               View All Services
             </Button>
           </div>
@@ -309,23 +312,20 @@ function Home() {
       </section>
 
       {/* Final CTA */}
-      <section
-        className="py-5 text-center text-white"
-        style={{ backgroundColor: '#0D1B2A' }}
-      >
-        <Container>
-          <h2 className="mb-4 display-5">Ready to Cool Your Space?</h2>
-          <p
-            className="lead mb-5"
-            style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.3rem' }}
-          >
-            Let our expert team help you plan, execute, and deliver your project
-            with efficiency and quality. Contact us today for expert
-            consultation and competitive quotes
-          </p>
-          <Button variant="primary" size="lg" className="px-4 py-2">
-            Get in Touch Now
-          </Button>
+      <section className="py-5" style={{ backgroundColor: '#ffffff' }}>
+        <Container className="d-flex justify-content-center">
+          {/* Inner Card */}
+          <div className="text-center px-4 py-5 cta-card">
+            <h2 className="mb-3 cta-head">Ready to Cool Your Space?</h2>
+
+            <p className="mb-4 cta-content">
+              Let our expert team help you plan, execute, and deliver your
+              project with efficiency and quality. Contact us today for expert
+              consultation and competitive quotes.
+            </p>
+
+            <Button size="md cta-button">Contact Us Today</Button>
+          </div>
         </Container>
       </section>
     </div>

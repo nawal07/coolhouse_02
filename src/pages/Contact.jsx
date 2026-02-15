@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram
+} from 'react-icons/fa';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -45,7 +51,7 @@ function Contact() {
               <p>
                 <strong>Address:</strong> Office No. 12, Business Bay,
                 <br />
-                Muscat, Oman
+                Al Malaz, Riyadh
               </p>
               <p>
                 <strong>Working Hours:</strong> Sunday – Thursday: 8:00 AM –
@@ -59,19 +65,25 @@ function Contact() {
                     href="#"
                     style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
                   >
-                    fb
+                    <FaFacebookF/>
                   </a>
                   <a
                     href="#"
                     style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
                   >
-                    ig
+                    <FaInstagram/>
                   </a>
                   <a
                     href="#"
                     style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
                   >
-                    li
+                    <FaLinkedinIn/>
+                  </a>
+                  <a
+                    href="#"
+                    style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
+                  >
+                    <FaTwitter/>
                   </a>
                 </div>
               </div>
@@ -189,9 +201,9 @@ function Contact() {
             ></iframe>
           </div>
 
-          <p className="text-center mt-3 text-muted small">
-            Al Malaz District, Riyadh • Centrally located near major roads
-          </p>
+          {/* <p className="text-center mt-3 text-muted small">
+            Al Malaz, Riyadh • Centrally located near major roads
+          </p> */}
         </div>
       </Container>
     </div>

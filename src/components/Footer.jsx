@@ -4,28 +4,31 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
 } from 'react-icons/fa';
 
 function Footer() {
   return (
     <footer
       style={{ backgroundColor: '#0D1B2A', color: '#E3F2FD' }}
-      className="py-5 mt-auto"
+      className="py-5 mt-auto pb-3"
     >
       <div className="container">
-        <div className="row">
+        <div className="row border-bottom pb-2">
           <div className="col-md-3">
-            <img src="Logo_2_no_bg.png" alt="Cool House" />
-            <p>
+            <img className="" src="Logo_3_no_bg.png" alt="Cool House" />
+            <p className="mt-3">
               Supplying quality materials and trusted solutions across Saudi
               Arabia.
             </p>
-            <div className="d-flex gap-5 mt-auto mb-5">
+            <div className="d-flex gap-4 mt-4 mb-5">
               <a
                 href="https://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-dark fs-2"
+                className="text-light fs-4"
               >
                 <FaFacebookF />
               </a>
@@ -33,7 +36,7 @@ function Footer() {
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-dark fs-2"
+                className="text-light fs-4"
               >
                 <FaTwitter />
               </a>
@@ -41,7 +44,7 @@ function Footer() {
                 href="https://linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-dark fs-2"
+                className="text-light fs-4"
               >
                 <FaLinkedinIn />
               </a>
@@ -49,44 +52,52 @@ function Footer() {
                 href="https://instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-dark fs-2"
+                className="text-light fs-4"
               >
                 <FaInstagram />
               </a>
             </div>
           </div>
-          <div className="col-md-1"></div>
-          <div className="col-md-5">
-            <h5>Quick Links</h5>
-            <ul>
-              <li>
-                <a href="/">Home</a>
+          <div className="col-md-2"></div>
+          <div className="col-md-3 mt-4">
+            <h5 className="mb-4">Quick Links</h5>
+            <ul style={{ listStyleType: 'none', padding: 0 }}>
+              <li className="mb-2">
+                <a className="links" href="/">
+                  Home
+                </a>
               </li>
-              <li>
-                <a href="/about">About</a>
+              <li className="mb-2">
+                <a className="links" href="/about">
+                  About
+                </a>
               </li>
-              <li>
-                <a href="/services">Services</a>
+              <li className="mb-2">
+                <a className="links" href="/services">
+                  Services
+                </a>
               </li>
-              <li>
-                <a href="/contact">Contact</a>
+              <li className="mb-2">
+                <a className="links" href="/contact">
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
-          <div className="col-md-3">
-            <h5>Contact Us</h5>
-            <p>
-              <i className="bi bi-phone"></i> +966530218322
+          <div className="col-md-3 mt-4">
+            <h5 className="mb-4">Contact Us</h5>
+            <p className="d-flex align-items-center gap-3">
+              <FaPhoneAlt /> +966530218322
             </p>
-            <p>
-              <i className="bi bi-envelope"></i> info@coolhouse.com
+            <p className="d-flex align-items-center gap-3">
+              <FaEnvelope /> info@coolhouse.com
             </p>
-            <p>
-              <i className="bi bi-geo-alt"></i> Al Malaz , Saudi Arabia
+            <p className="d-flex align-items-center gap-3">
+              <FaMapMarkerAlt /> Al Malaz , Saudi Arabia
             </p>
           </div>
         </div>
-        <p>Copyright © 2025 COOL HOUSE. All rights reserved.</p>
+        <p className='text-center pt-4 '>Copyright © 2025 COOL HOUSE. All rights reserved.</p>
       </div>
     </footer>
   );

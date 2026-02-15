@@ -161,3 +161,48 @@ h6 {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(64, 196, 255, 0.15);
 }
+
+.service-btn{
+  background-color: #113254 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 28px !important;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+}
+
+.cta-card {
+  background-color: #113254;
+  border-radius: 28px;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cta-head {
+  font-weight: 500;
+  color: white;
+  font-size: 2rem;
+}
+
+.cta-content {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background-color: #ffffff !important;
+  color: #0d1b2a !important;
+  border: none !important;
+  padding: 12px 28px !important;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+}

@@ -18,7 +18,7 @@ function Navbar() {
       </BSNavbar.Brand>
       <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
       <BSNavbar.Collapse id="basic-navbar-nav">
-        <Nav className="mx-auto" onClick={() => setExpanded(false)}>
+        <Nav className="mx-auto gap-3" onClick={() => setExpanded(false)}>
           <Nav.Link as={NavLink} to="/">
             Home
           </Nav.Link>
