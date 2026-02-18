@@ -24,7 +24,7 @@ function Contact() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const whatsappNumber = '+919846851343';
+    const whatsappNumber = '+966594869891';
 
     const message = [
       'New Inquiry from Website!',

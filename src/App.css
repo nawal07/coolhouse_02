@@ -216,11 +216,11 @@ h6 {
   transition: all 0.3s ease;
 }
 
-.btn-contact {
+/* .btn-contact {
   color: #111f5a !important;
   border-color: #111f5a !important;
   border-radius: 10px;
-}
+} */
 
 .btn-contact:hover {
   background-color: #111f5a !important;

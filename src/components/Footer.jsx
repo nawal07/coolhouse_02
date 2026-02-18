@@ -99,24 +99,37 @@ function Footer() {
             <p className="d-flex align-items-center gap-3">
               <FaWhatsapp />
               <a
-                href={`https://wa.me/919846851343?text=${encodeURIComponent("Hello! I'm contacting you from your website.")}`}
+                href={`https://wa.me/966594869891?text=${encodeURIComponent("Hello! I'm contacting you from your website.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-decoration-none text-white hover-text-primary"
               >
-                +91 9846851343
+                +966 594 869 891
               </a>
             </p>
 
             <p className="d-flex align-items-center gap-3">
               <FaEnvelope />
-              <a
+              {/* <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=nawalsidiq077@gmail.com&su=Inquiry%20from%20Website"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-decoration-none text-white hover-text-primary"
+              > */}
+
+              <a
+                href="googlegmail://co?to=info@coolhousetrading.com&subject=Inquiry%20from%20Coolhouse%20Website"
+                className="text-decoration-none text-white hover-text-primary"
+                onClick={e => {
+                  // If on desktop or Gmail not installed → fallback to mailto
+                  if (!/Mobi|Android/i.test(navigator.userAgent)) {
+                    e.preventDefault();
+                    window.location.href =
+                      'mailto:info@coolhousetrading.com?subject=Inquiry%20from%20Coolhouse%20Website';
+                  }
+                }}
               >
-                nawalsidiq077@gmail.com
+                info@coolhousetrading.com
               </a>
             </p>
             <p className="d-flex align-items-center gap-3">

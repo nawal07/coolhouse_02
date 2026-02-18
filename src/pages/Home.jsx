@@ -58,8 +58,8 @@ function Home() {
                   as={Link}
                   to="/contact"
                   style={{
-                    color: '#111f5a',
-                    borderColor: '#111f5a',
+                    color: '#ffffff',
+                    borderColor: '#ffffff',
                     borderRadius: '10px',
                   }}
                   className="btn-contact"
@@ -121,8 +121,8 @@ function Home() {
                   as={Link}
                   to="/contact"
                   style={{
-                    color: '#111f5a',
-                    borderColor: '#111f5a',
+                    color: '#ffffff',
+                    borderColor: '#ffffff',
                     borderRadius: '10px',
                   }}
                   className="btn-contact"
@@ -184,8 +184,8 @@ function Home() {
                   as={Link}
                   to="/contact"
                   style={{
-                    color: '#111f5a',
-                    borderColor: '#111f5a',
+                    color: '#ffffff',
+                    borderColor: '#ffffff',
                     borderRadius: '10px',
                   }}
                   className="btn-contact"
