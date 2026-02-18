@@ -188,6 +188,7 @@ function Contact() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    required
                   />
                 </Form.Group>
 
