@@ -91,7 +91,7 @@ function Footer() {
               <FaPhoneAlt />
               <a
                 href="tel:+966114781100"
-                className="text-decoration-none text-reset"
+                className="text-decoration-none text-white  text-reset"
               >
                 +966 11 478 1100
               </a>
@@ -117,7 +117,7 @@ function Footer() {
                 info@coolhousetrading.com
               </a>
             </p>
-            <p className="d-flex align-items-center gap-3">
+            <p className="d-flex align-items-center gap-3 text-white ">
               <FaMapMarkerAlt /> Al Malaz , Saudi Arabia
             </p>
           </div>
