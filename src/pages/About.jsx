@@ -4,7 +4,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';import { Lin
 function About() {
   return (
     <div
-      className="section d-flex flex-column justify-content-center"
+      className="section d-flex flex-column justify-content-center mt-4"
       style={{ backgroundColor: 'var(--bg-light)' }}
     >
       <Container fluid className="px-4 px-md-5">
@@ -52,8 +52,8 @@ function About() {
         </Row>
 
         {/* Mission & Vision Section */}
-        <div className="text-center mb-5 pb-4">
-          <h2 className="display-6 fw-bold mt-4 mb-4">Our Vision & Mission</h2>
+        <div className="text-center mb-2 pb-4">
+          <h2 className="display-6 fw-bold mt-4 mb-2">Our Vision & Mission</h2>
         </div>
 
         <Row className="g-5 mb-5">

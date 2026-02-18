@@ -53,7 +53,7 @@ function Contact() {
   };
 
   return (
-    <div className="" style={{ backgroundColor: 'var(--bg-light)' }}>
+    <div className="mt-5" style={{ backgroundColor: 'var(--bg-light)' }}>
       <Container fluid className="px-4 px-md-5">
         <div className="text-center mb-5 mt-5">
           <h1 className="snowflake-accent display-5 fw-bold">Contact Us</h1>

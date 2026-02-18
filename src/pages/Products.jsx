@@ -360,7 +360,7 @@ function Products() {
 
   return (
     <div
-      className="section py-5"
+      className="section py-5 mt-5"
       style={{ backgroundColor: 'var(--bg-light)' }}
     >
       <Container fluid className="px-4 px-md-5">

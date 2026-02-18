@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div>
+    <div className='mt-5'>
       {/* Hero Carousel */}
       <Carousel fade interval={2000} indicators={true} controls={true}>
         <Carousel.Item>
