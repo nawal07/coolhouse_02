@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar as BSNavbar, Nav, Button } from 'react-bootstrap';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, Link } from 'react-router-dom';
 import {
   FaFacebookF,
   FaInstagram,
@@ -76,24 +76,14 @@ function Navbar() {
           </Nav.Link>
         </Nav>
 
-        {/* <Nav className="mx-auto text-center">
-          <Nav.Link as={NavLink} to="/" className="px-3 py-2">
-            Home
-          </Nav.Link>
-          <Nav.Link as={NavLink} to="/about" className="px-3 py-2">
-            About
-          </Nav.Link>
-          <Nav.Link as={NavLink} to="/products" className="px-3 py-2">
-            Products
-          </Nav.Link>
-          <Nav.Link as={NavLink} to="/contact" className="px-3 py-2">
-            Contact
-          </Nav.Link>
-        </Nav> */}
-
         {/* Desktop: Get Started button (hidden on mobile) */}
         <div className="d-none d-lg-block ms-lg-3">
-          <Button variant="warning" className="get-started-btn px-4 py-2">
+          <Button
+            variant="warning"
+            className="get-started-btn px-4 py-2"
+            as={Link}
+            to="/contact"
+          >
             Get Started
           </Button>
         </div>

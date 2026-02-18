@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div className='mt-5'>
+    <div className="mt-5">
       {/* Hero Carousel */}
       <Carousel fade interval={2000} indicators={true} controls={true}>
         <Carousel.Item>
@@ -199,7 +199,12 @@ function Home() {
       </Carousel>
 
       {/* About Summary */}
-      <section className="section py-5">
+      <section
+        className="section py-5"
+        style={{
+          backgroundColor: '#ffffff',
+        }}
+      >
         <Container>
           <h2 className="section-heading">Who We Are</h2>
           <p className="section-subheading">
