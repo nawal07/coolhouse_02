@@ -26,7 +26,7 @@ function Home() {
                 zIndex: 1,
               }}
             />
-            <Container style={{ position: 'relative', zIndex: 2 }}>
+            <Container fluid style={{ position: 'relative', zIndex: 2 }}>
               <h1 className=" snowflake-accent mb-4 fw-medium display-5">
                 The Future of Cooling Solutions
               </h1>
