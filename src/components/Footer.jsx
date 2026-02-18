@@ -93,7 +93,7 @@ function Footer() {
                 href="tel:+966114781100"
                 className="text-decoration-none text-reset"
               >
-                +966 114 781 100
+                +966 11 478 1100
               </a>
             </p>
             <p className="d-flex align-items-center gap-3">
@@ -104,7 +104,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="text-decoration-none text-white hover-text-primary"
               >
-                +966 598 986 363
+                +966 59 898 6363
               </a>
             </p>
 
