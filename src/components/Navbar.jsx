@@ -21,8 +21,7 @@ function Navbar() {
     <BSNavbar
       bg="light"
       expand="lg"
-      sticky="top"
-      className="px-3 px-md-5 shadow-sm"
+      className="fixed-top px-3 px-md-5 shadow-sm"
       expanded={expanded}
       onToggle={() => setExpanded(!expanded)}
     >
