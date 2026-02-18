@@ -21,13 +21,11 @@ body,
   box-sizing: border-box;
 }
 
-/* img,
-.card-img,
-.card,
-.container,
-.row {
-  max-width: 100% !important;
-} */
+.hero,
+img {
+  max-width: 100%;
+  overflow: hidden;
+}
 
 :root {
   --primary-cool: #40c4ff;
