@@ -103,7 +103,7 @@ function Navbar() {
         <div className="d-flex justify-content-center d-lg-none mt-4 pt-4 pb-3 text-center">
           <div className="d-flex justify-content-center  gap-5 fs-3">
             <a
-              href="https://facebook.com/yourpage"
+              href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark"
@@ -112,7 +112,7 @@ function Navbar() {
               <FaFacebookF />
             </a>
             <a
-              href="https://instagram.com/yourpage"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark"
@@ -121,7 +121,7 @@ function Navbar() {
               <FaInstagram />
             </a>
             <a
-              href="https://linkedin.com/company/yourcompany"
+              href="https://linkedin.com/company"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark"
@@ -130,7 +130,7 @@ function Navbar() {
               <FaLinkedinIn />
             </a>
             <a
-              href="https://twitter.com/yourhandle"
+              href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark"

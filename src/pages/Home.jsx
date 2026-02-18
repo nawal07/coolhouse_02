@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Button, Card, Row, Col, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -41,7 +42,8 @@ function Home() {
                   variant="primary"
                   size="lg"
                   className="me-3"
-                  href="/products"
+                  as={Link}
+                  to="/products"
                   style={{
                     backgroundColor: '#111f5a',
                     borderColor: '#111f5a',
@@ -53,7 +55,8 @@ function Home() {
                 <Button
                   variant="outline-primary"
                   size="lg"
-                  href="/contact"
+                  as={Link}
+                  to="/contact"
                   style={{
                     color: '#111f5a',
                     borderColor: '#111f5a',
@@ -107,14 +110,16 @@ function Home() {
                   }}
                   size="lg"
                   className="me-3"
-                  href="/products"
+                  as={Link}
+                  to="/products"
                 >
                   Our Products
                 </Button>
                 <Button
                   variant="outline-primary"
                   size="lg"
-                  href="/contact"
+                  as={Link}
+                  to="/contact"
                   style={{
                     color: '#111f5a',
                     borderColor: '#111f5a',
@@ -163,7 +168,8 @@ function Home() {
                   variant="primary"
                   size="lg"
                   className="me-3"
-                  href="/products"
+                  as={Link}
+                  to="/products"
                   style={{
                     backgroundColor: '#111f5a',
                     borderColor: '#111f5a',
@@ -175,7 +181,8 @@ function Home() {
                 <Button
                   variant="outline-primary"
                   size="lg"
-                  href="/contact"
+                  as={Link}
+                  to="/contact"
                   style={{
                     color: '#111f5a',
                     borderColor: '#111f5a',
@@ -212,7 +219,7 @@ function Home() {
                 of commercial freezers, chest freezers and upright fridges at
                 reasonable prices.
               </p>
-              <Button variant="primary" href="/about">
+              <Button variant="primary" as={Link} to="/about">
                 Discover More
               </Button>
             </Col>
@@ -425,7 +432,7 @@ function Home() {
           </Row>
 
           <div className=" text-center mt-5 pt-4">
-            <Button size="md" className="service-btn" href="/products">
+            <Button size="md" className="service-btn" as={Link} to="/products">
               View All Products
             </Button>
           </div>
@@ -447,7 +454,7 @@ function Home() {
               consultation and competitive quotes.
             </p>
 
-            <Button size="md cta-button" href="/contact">
+            <Button size="md cta-button" as={Link} to="/contact">
               Contact Us Today
             </Button>
           </div>

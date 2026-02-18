@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card } from 'react-bootstrap';import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -35,7 +35,8 @@ function About() {
               }}
               size="lg"
               className="mt-3"
-              href="/contact"
+              as={Link}
+              to="/contact"
             >
               Contact Our Team
             </Button>
