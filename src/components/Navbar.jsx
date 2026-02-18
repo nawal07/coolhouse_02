@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar as BSNavbar, Nav, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,12 +9,22 @@ import {
 } from 'react-icons/fa';
 
 function Navbar() {
+  const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  // Auto-close menu when route changes (user clicks a link)
+  React.useEffect(() => {
+    setExpanded(false);
+  }, [location.pathname]);
+
   return (
     <BSNavbar
       bg="light"
       expand="lg"
       sticky="top"
       className="px-3 px-md-5 shadow-sm"
+      expanded={expanded}
+      onToggle={() => setExpanded(!expanded)}
     >
       {/* Logo */}
       <BSNavbar.Brand as={NavLink} to="/">
@@ -31,7 +41,43 @@ function Navbar() {
       {/* Collapsible content */}
       <BSNavbar.Collapse id="basic-navbar-nav">
         {/* Navigation links - centered on desktop */}
-        <Nav className="mx-auto text-center">
+
+        <Nav className="mx-auto text-center mb-4 mb-lg-0">
+          <Nav.Link
+            as={NavLink}
+            to="/"
+            className="px-3 py-2"
+            onClick={() => setExpanded(false)}
+          >
+            Home
+          </Nav.Link>
+          <Nav.Link
+            as={NavLink}
+            to="/about"
+            className="px-3 py-2"
+            onClick={() => setExpanded(false)}
+          >
+            About
+          </Nav.Link>
+          <Nav.Link
+            as={NavLink}
+            to="/products"
+            className="px-3 py-2"
+            onClick={() => setExpanded(false)}
+          >
+            Products
+          </Nav.Link>
+          <Nav.Link
+            as={NavLink}
+            to="/contact"
+            className="px-3 py-2"
+            onClick={() => setExpanded(false)}
+          >
+            Contact
+          </Nav.Link>
+        </Nav>
+
+        {/* <Nav className="mx-auto text-center">
           <Nav.Link as={NavLink} to="/" className="px-3 py-2">
             Home
           </Nav.Link>
@@ -44,7 +90,7 @@ function Navbar() {
           <Nav.Link as={NavLink} to="/contact" className="px-3 py-2">
             Contact
           </Nav.Link>
-        </Nav>
+        </Nav> */}
 
         {/* Desktop: Get Started button (hidden on mobile) */}
         <div className="d-none d-lg-block ms-lg-3">
