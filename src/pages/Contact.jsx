@@ -4,7 +4,7 @@ import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
-  FaInstagram
+  FaInstagram,
 } from 'react-icons/fa';
 
 function Contact() {
@@ -16,32 +16,57 @@ function Contact() {
     message: '',
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    // You can add fetch to backend here
-    console.log('Form submitted:', formData);
-    alert('Thank you! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    const whatsappNumber = '+919846851343';
+
+    const message = [
+      'New Inquiry from Website!',
+      '',
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Subject: ${formData.subject || 'General Inquiry From Website'}`,
+      '',
+      'Message:',
+      formData.message,
+    ].join('\n');
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, '_blank');
+
+    // Show success message
+    setSubmitted(true);
+
+    // Optional: Reset form after 2 seconds
+    setTimeout(() => {
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      setSubmitted(false);
+    }, 2500);
   };
 
   return (
-    <div className="section" style={{ backgroundColor: 'var(--bg-light)' }}>
+    <div className="" style={{ backgroundColor: 'var(--bg-light)' }}>
       <Container fluid className="px-4 px-md-5">
-        <div className="text-center mb-5">
-          <h1 className="snowflake-accent">Get in Touch</h1>
+        <div className="text-center mb-5 mt-5">
+          <h1 className="snowflake-accent display-5 fw-bold">Contact Us</h1>
           <p className="lead text-muted">
-            We're here to help with all your cooling needs
+            We're here to help with all your cooling needs. Reach out and we’ll
+            respond promptly.
           </p>
         </div>
 
         <Row className="g-4 contact-row">
           <Col lg={5}>
             <Card className="p-4 h-100 shadow-sm border-0">
-              <h4 className="mb-4">Contact Information</h4>
+              <h4 className="mb-4">Get In Touch</h4>
               <p>
                 <strong>Phone:</strong> +968 1234 5678
               </p>
@@ -49,41 +74,45 @@ function Contact() {
                 <strong>Email:</strong> info@coolhousetrading.com
               </p>
               <p>
-                <strong>Address:</strong> Office No. 12, Business Bay,
+                <strong>Address:</strong> Building No. 4317, Ibn Shaddad,
                 <br />
                 Al Malaz, Riyadh
-              </p>
-              <p>
-                <strong>Working Hours:</strong> Sunday – Thursday: 8:00 AM –
-                5:00 PM
               </p>
 
               <div className="mt-4">
                 <h5>Follow Us</h5>
                 <div className="d-flex gap-3">
                   <a
-                    href="#"
-                    style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
+                    href="https://facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="fs-4"
                   >
-                    <FaFacebookF/>
+                    <FaFacebookF />
                   </a>
                   <a
-                    href="#"
-                    style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
+                    href="https://instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="fs-4"
                   >
-                    <FaInstagram/>
+                    <FaInstagram />
                   </a>
                   <a
-                    href="#"
-                    style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="fs-4"
                   >
-                    <FaLinkedinIn/>
+                    <FaTwitter />
                   </a>
                   <a
-                    href="#"
-                    style={{ color: 'var(--primary-cool)', fontSize: '1.8rem' }}
+                    href="https://linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="fs-4"
                   >
-                    <FaTwitter/>
+                    <FaLinkedinIn />
                   </a>
                 </div>
               </div>
@@ -92,6 +121,11 @@ function Contact() {
 
           <Col lg={7}>
             <Card className="p-4 shadow-sm border-0">
+              {submitted && (
+                <Alert variant="success">
+                  Message sent to WhatsApp! Our team will reply shortly.
+                </Alert>
+              )}
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col md={6}>
@@ -170,42 +204,34 @@ function Contact() {
             </Card>
           </Col>
         </Row>
-
-        {/* Map Section */}
-        <div className="mt-5 pt-4">
-          <h4
-            className="text-center mb-4 fw-bold"
-            style={{ color: 'var(--primary-bold)' }}
-          >
-            Find Us in Al Malaz, Riyadh
-          </h4>
-
-          <div
-            className="ratio rounded-4 overflow-hidden shadow-lg border border-3 map-container mx-auto"
-            style={{
-              borderColor: 'var(--primary-cool)',
-              width: '100%',
-              height: '50%', // 60% of its parent's height
-              minHeight: '450px', // fallback minimum
-            }}
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.5!2d46.730!3d24.665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f1d8a0b0b0b0b%3A0x0!2sAl%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Map of Al Malaz District, Riyadh"
-            ></iframe>
-          </div>
-
-          {/* <p className="text-center mt-3 text-muted small">
-            Al Malaz, Riyadh • Centrally located near major roads
-          </p> */}
-        </div>
       </Container>
+      {/* Map Section */}
+      <div className="mt-5 pt-4">
+        <h4
+          className="text-center mb-4 fw-bold"
+          style={{ color: 'var(--primary-bold)' }}
+        >
+          Find Us in Al Malaz, Riyadh
+        </h4>
+
+        <div
+          className="ratio map-container"
+          style={{
+            width: '100%',
+            height: '50%',
+            minHeight: '450px',
+          }}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2154.384478033849!2d46.72935260880804!3d24.665688331361526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f043f1e063065%3A0xb852619d37b50c!2s%D8%AD%D9%8A%2C%20REMA4317%2C%204317%20Ibn%20Shaddad%2C%207386%2C%20Al%20Malaz%2C%20Riyadh%2012629%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sin!4v1771360231100!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Map of Al Malaz District, Riyadh"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,28 +5,62 @@ function Home() {
   return (
     <div>
       {/* Hero Carousel */}
-      <Carousel>
+      <Carousel fade interval={2000} indicators={true} controls={true}>
         <Carousel.Item>
           <div
-            className="hero text-center py-5 py-md-5"
-            style={{ backgroundImage: 'image-2.jpg' }}
+            className="hero text-center text-white d-flex align-items-center justify-content-center"
+            style={{
+              backgroundImage: `url('/hero_1.jpg')`, // ← correct path from public/
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '85vh',
+            }}
           >
-            <Container>
-              <h1 className=" snowflake-accent display-3 fw-bold mb-4">
-                Expert Air Conditioning Services
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'rgba(0, 0, 0, 0.45)', // dark overlay – change opacity 0.35–0.55
+                zIndex: 1,
+              }}
+            />
+            <Container style={{ position: 'relative', zIndex: 2 }}>
+              <h1 className=" snowflake-accent mb-4 fw-medium display-5">
+                The Future of Cooling Solutions
               </h1>
               <p
-                className="lead mb-4"
-                style={{ maxWidth: '800px', margin: '0 auto' }}
+                className="lead mb-5 fs-4"
+                style={{ maxWidth: '900px', margin: '0 auto' }}
               >
-                We deliver Reliable Cooling Solutions and Unmatched Comfort for
-                Homes and Businesses Alike
+                We offer an extensive range of commercial freezers, chest
+                freezers and upright Fridges at reasonable prices.
               </p>
               <div className="btn-group-single">
-                <Button variant="primary" size="lg" className="me-3">
-                  Our Services
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="me-3"
+                  href="/products"
+                  style={{
+                    backgroundColor: '#111f5a',
+                    borderColor: '#111f5a',
+                    borderRadius: '10px',
+                  }}
+                >
+                  Our Products
                 </Button>
-                <Button variant="outline-primary" size="lg">
+                <Button
+                  variant="outline-primary"
+                  size="lg"
+                  href="/contact"
+                  style={{
+                    color: '#111f5a',
+                    borderColor: '#111f5a',
+                    borderRadius: '10px',
+                  }}
+                  className="btn-contact"
+                >
                   Contact Us
                 </Button>
               </div>
@@ -34,23 +68,60 @@ function Home() {
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="hero text-center py-5 py-md-5">
-            <Container>
-              <h1 className="snowflake-accent display-3 fw-bold mb-4">
-                Building Excellence
+          <div
+            className="hero text-center text-white d-flex align-items-center justify-content-center"
+            style={{
+              backgroundImage: `url('/hero_2.jpg')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '85vh',
+            }}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'rgba(0, 0, 0, 0.45)',
+                zIndex: 1,
+              }}
+            />
+
+            <Container style={{ position: 'relative', zIndex: 2 }}>
+              <h1 className="snowflake-accent display-3 mb-4">
+                Trusted destination for commercial refrigeration equipment.
               </h1>
               <p
                 className="lead mb-4"
                 style={{ maxWidth: '800px', margin: '0 auto' }}
               >
-                We deliver Reliable Cooling Solutions and Unmatched Comfort for
-                Homes and Businesses Alike
+                Ultra compact, convinient and made to fit anywhere.
               </p>
               <div className="btn-group-single">
-                <Button variant="primary" size="lg" className="me-3">
-                  Our Services
+                <Button
+                  variant="primary"
+                  style={{
+                    backgroundColor: '#111f5a',
+                    borderColor: '#111f5a',
+                    borderRadius: '10px',
+                  }}
+                  size="lg"
+                  className="me-3"
+                  href="/products"
+                >
+                  Our Products
                 </Button>
-                <Button variant="outline-primary" size="lg">
+                <Button
+                  variant="outline-primary"
+                  size="lg"
+                  href="/contact"
+                  style={{
+                    color: '#111f5a',
+                    borderColor: '#111f5a',
+                    borderRadius: '10px',
+                  }}
+                  className="btn-contact"
+                >
                   Contact Us
                 </Button>
               </div>
@@ -58,23 +129,60 @@ function Home() {
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="hero text-center py-5 py-md-5">
-            <Container>
-              <h1 className="snowflake-accent display-3 fw-bold mb-4">
-                Reliable Equipment powering your projects
+          <div
+            className="hero text-center text-white d-flex align-items-center justify-content-center"
+            style={{
+              backgroundImage: ` url('/hero_3.jpg')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '85vh',
+            }}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'rgba(0, 0, 0, 0.45)',
+                zIndex: 1,
+              }}
+            />
+
+            <Container style={{ position: 'relative', zIndex: 2 }}>
+              <h1 className="snowflake-accent display-3 mb-4">
+                Sustainably cooler
               </h1>
               <p
                 className="lead mb-4"
                 style={{ maxWidth: '800px', margin: '0 auto' }}
               >
-                We deliver Reliable Cooling Solutions and Unmatched Comfort for
-                Homes and Businesses Alike
+                Coolers that comes with ecofriendly hydrocarbon refrigerant.
               </p>
               <div className="btn-group-single">
-                <Button variant="primary" size="lg" className="me-3">
-                  Our Services
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="me-3"
+                  href="/products"
+                  style={{
+                    backgroundColor: '#111f5a',
+                    borderColor: '#111f5a',
+                    borderRadius: '10px',
+                  }}
+                >
+                  Our Products
                 </Button>
-                <Button variant="outline-primary" size="lg">
+                <Button
+                  variant="outline-primary"
+                  size="lg"
+                  href="/contact"
+                  style={{
+                    color: '#111f5a',
+                    borderColor: '#111f5a',
+                    borderRadius: '10px',
+                  }}
+                  className="btn-contact"
+                >
                   Contact Us
                 </Button>
               </div>
@@ -88,24 +196,30 @@ function Home() {
         <Container>
           <h2 className="section-heading">Who We Are</h2>
           <p className="section-subheading">
-            Coolhouse Trading – Your trusted partner in advanced cooling
-            technology
+            Coolhouse Trading – Your trusted partner with Affordable, High
+            quality, and Best Top Brand Genuine products of Commercial
+            Refrigeration
           </p>
 
           <Row className="align-items-center g-5">
             <Col lg={6}>
-              <h3 className="fw-bold mb-4">Building Excellence in Cooling</h3>
+              <h3 className="fw-bold mb-4">
+                Get the best of efficiency and energy saving{' '}
+              </h3>
               <p className="mb-4">
-                Coolhouse Trading specializes in supplying high-quality HVAC
-                systems, refrigeration components, cold room solutions, and
-                energy-efficient climate control products across the region.
+                Coolhouse Trading specializes in supplying high-quality
+                commercial refrigeration equipment. We offer an extensive range
+                of commercial freezers, chest freezers and upright fridges at
+                reasonable prices.
               </p>
-              <Button variant="primary">Discover More</Button>
+              <Button variant="primary" href="/about">
+                Discover More
+              </Button>
             </Col>
             <Col lg={6}>
               <img
-                src="image-2.jpg"
-                alt="Professional HVAC installation"
+                src="who_we_are.jpg"
+                alt="Who We are"
                 className="img-fluid rounded-4 shadow"
               />
             </Col>
@@ -114,10 +228,7 @@ function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section
-        className="section py-5"
-        style={{ backgroundColor: '#e6f2ff' }}
-      >
+      <section className="section py-5" style={{ backgroundColor: '#e6f2ff' }}>
         <Container>
           <h2 className="section-heading">Why Choose Coolhouse</h2>
           <p className="section-subheading">
@@ -189,13 +300,16 @@ function Home() {
         </Container>
       </section>
 
-      {/* Core Services */}
-      <section className="section py-5 border-bottom" style={{ backgroundColor: 'var(--bg-light)' }} >
+      {/* Core Products */}
+      <section
+        className="section py-5 border-bottom"
+        style={{ backgroundColor: 'var(--bg-light)' }}
+      >
         <Container fluid className="px-4 px-md-5">
-          <h2 className="section-heading">Our Core Services</h2>
+          <h2 className="section-heading">Our Products</h2>
           <p className="section-subheading">
-            Comprehensive cooling and support solutions engineered for
-            performance, reliability, and efficiency
+            Premium Commercial Refrigeration Solutions – Upright Fridges &
+            Freezers
           </p>
 
           <Row className="g-5">
@@ -203,14 +317,16 @@ function Home() {
               <Card className="h-100 border-0 shadow-sm overflow-hidden">
                 <Card.Img
                   variant="top"
-                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="gvc_406.png"
                   style={{ height: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body className="text-center p-4">
-                  <h5 className="fw-bold mt-3">Air Conditioning Systems</h5>
-                  <p className="text-muted small">
+                  <h5 className="fw-bold mt-3">
+                    GVC 406 Up-right Showcase Refrigerator (Single Door)
+                  </h5>
+                  {/* <p className="text-muted small">
                     Split, cassette, ducted, VRV/VRF systems for all sectors
-                  </p>
+                  </p> */}
                 </Card.Body>
               </Card>
             </Col>
@@ -219,14 +335,16 @@ function Home() {
               <Card className="h-100 border-0 shadow-sm overflow-hidden">
                 <Card.Img
                   variant="top"
-                  src="https://images.pexels.com/photos/5816792/pexels-photo-5816792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="gvc_526.png"
                   style={{ height: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body className="text-center p-4">
-                  <h5 className="fw-bold mt-3">Refrigeration Spare Parts</h5>
-                  <p className="text-muted small">
+                  <h5 className="fw-bold mt-3">
+                    GVC 526 Up-right Showcase Refrigerator (Single Door)
+                  </h5>
+                  {/* <p className="text-muted small">
                     Genuine compressors, coils, valves & controls
-                  </p>
+                  </p> */}
                 </Card.Body>
               </Card>
             </Col>
@@ -235,16 +353,16 @@ function Home() {
               <Card className="h-100 border-0 shadow-sm overflow-hidden">
                 <Card.Img
                   variant="top"
-                  src="https://images.pexels.com/photos/8818912/pexels-photo-8818912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="gvc_636.png"
                   style={{ height: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body className="text-center p-4">
                   <h5 className="fw-bold mt-3">
-                    Cold Room & Freezer Solutions
+                    GVC 636 Up-right Showcase Refrigerator (Single Door)
                   </h5>
-                  <p className="text-muted small">
+                  {/* <p className="text-muted small">
                     Complete cold storage design & installation
-                  </p>
+                  </p> */}
                 </Card.Body>
               </Card>
             </Col>
@@ -253,16 +371,16 @@ function Home() {
               <Card className="h-100 border-0 shadow-sm overflow-hidden">
                 <Card.Img
                   variant="top"
-                  src="https://images.pexels.com/photos/5854189/pexels-photo-5854189.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="gvc_1106.png"
                   style={{ height: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body className="text-center p-4">
                   <h5 className="fw-bold mt-3">
-                    Ventilation & Air Handling Units
+                    GVC 1106 Up-right Showcase Refrigerator (Double Swing Door)
                   </h5>
-                  <p className="text-muted small">
+                  {/* <p className="text-muted small">
                     AHUs, fresh air systems, heat recovery units
-                  </p>
+                  </p> */}
                 </Card.Body>
               </Card>
             </Col>
@@ -271,14 +389,17 @@ function Home() {
               <Card className="h-100 border-0 shadow-sm overflow-hidden">
                 <Card.Img
                   variant="top"
-                  src="https://images.pexels.com/photos/6691961/pexels-photo-6691961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="gvc_1200.png"
                   style={{ height: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body className="text-center p-4">
-                  <h5 className="fw-bold mt-3">Controls & Automation</h5>
-                  <p className="text-muted small">
+                  <h5 className="fw-bold mt-3">
+                    GVC 1200 Up-right Showcase Refrigerator (Double Sliding
+                    Door)
+                  </h5>
+                  {/* <p className="text-muted small">
                     Smart thermostats, BMS, IoT climate control
-                  </p>
+                  </p> */}
                 </Card.Body>
               </Card>
             </Col>
@@ -287,25 +408,25 @@ function Home() {
               <Card className="h-100 border-0 shadow-sm overflow-hidden">
                 <Card.Img
                   variant="top"
-                  src="https://images.pexels.com/photos/4498370/pexels-photo-4498370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="gvc_1350.png"
                   style={{ height: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body className="text-center p-4">
-                  <h5 className="fw-bold mt-3">Maintenance & After-Sales</h5>
-                  <p className="text-muted small">
+                  <h5 className="fw-bold mt-3">
+                    GVC 1350 Up-right Showcase Refrigerator (Double Sliding
+                    Door)
+                  </h5>
+                  {/* <p className="text-muted small">
                     AMC, emergency repair, genuine spare supply
-                  </p>
+                  </p> */}
                 </Card.Body>
               </Card>
             </Col>
           </Row>
 
           <div className=" text-center mt-5 pt-4">
-            <Button
-              size="md"
-              className= "service-btn"
-            >
-              View All Services
+            <Button size="md" className="service-btn" href="/products">
+              View All Products
             </Button>
           </div>
         </Container>
@@ -316,15 +437,19 @@ function Home() {
         <Container className="d-flex justify-content-center">
           {/* Inner Card */}
           <div className="text-center px-4 py-5 cta-card">
-            <h2 className="mb-3 cta-head">Ready to Cool Your Space?</h2>
+            <h2 className="mb-3 cta-head">
+              Need to keep your Products cool and fresh?
+            </h2>
 
             <p className="mb-4 cta-content">
               Let our expert team help you plan, execute, and deliver your
-              project with efficiency and quality. Contact us today for expert
+              [product] with efficiency and quality. Contact us today for expert
               consultation and competitive quotes.
             </p>
 
-            <Button size="md cta-button">Contact Us Today</Button>
+            <Button size="md cta-button" href="/contact">
+              Contact Us Today
+            </Button>
           </div>
         </Container>
       </section>

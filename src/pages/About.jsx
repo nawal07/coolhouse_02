@@ -17,71 +17,186 @@ function About() {
               region.
             </p>
             <p>
-              Coolhouse Trading specializes in the supply and distribution of
-              high-quality HVAC systems, refrigeration spare parts, air
-              conditioning units, and related industrial cooling products. With
-              years of experience and strong partnerships with global
-              manufacturers, we deliver reliable, energy-efficient, and
-              innovative solutions tailored to commercial, industrial, and
-              residential needs.
+              Coolhouse Trading specializes in delivering commercial
+              refrigeration equipment at the convenience of users. Over the
+              years we have had the privilege to partner with some of the best
+              and leading brands from around the world to bring the premier
+              machines for our customers. Since our inception, Coolhouse mission
+              has been un-parallel in providing a quality shopping experience in
+              every neighborhood, serving customers even in second-tier cities
+              and towns from comfort to your Home, Office or anywhere you are.
             </p>
-            <Button variant="primary" size="lg" className="mt-3">
+            <Button
+              variant="primary"
+              style={{
+                backgroundColor: '#111f5a',
+                borderColor: '#111f5a',
+                borderRadius: '10px',
+              }}
+              size="lg"
+              className="mt-3"
+              href="/contact"
+            >
               Contact Our Team
             </Button>
           </Col>
           <Col lg={6} className="text-center mt-4 mt-lg-0">
             <img
-              src="image-2.jpg"
-              alt="Modern HVAC installation"
+              src="who_we_are.jpg"
+              alt="About Us"
               className="img-fluid rounded-4 shadow"
               style={{ maxHeight: '450px', objectFit: 'cover' }}
             />
           </Col>
         </Row>
 
+        {/* Mission & Vision Section */}
+        <div className="text-center mb-5 pb-4">
+          <h2 className="display-6 fw-bold mt-4 mb-4">Our Vision & Mission</h2>
+        </div>
+
+        <Row className="g-5 mb-5">
+          {/* Vision Card */}
+          <Col lg={6}>
+            <Card className="h-100 border-0 shadow-lg p-4 p-md-5 text-center">
+              <Card.Body>
+                <div className="mb-4">
+                  <span
+                    style={{ fontSize: '4.5rem', color: 'var(--primary-cool)' }}
+                  >
+                    🌟
+                  </span>
+                </div>
+                <Card.Title className="fw-bold fs-3 mb-4">
+                  Our Vision
+                </Card.Title>
+                <Card.Text className="fs-5 text-muted lh-lg">
+                  Coolhouse is driven by innovation and a vision to be the
+                  world's foremost solution provider.
+                  <br />
+                  <br />
+                  Our vision is to be the world's leading commercial
+                  refrigeration solution provider.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          {/* Mission Card */}
+          <Col lg={6}>
+            <Card className="h-100 border-0 shadow-lg p-4 p-md-5 text-center">
+              <Card.Body>
+                <div className="mb-4">
+                  <span
+                    style={{ fontSize: '4.5rem', color: 'var(--primary-cool)' }}
+                  >
+                    🎯
+                  </span>
+                </div>
+                <Card.Title className="fw-bold fs-3 mb-4">
+                  Our Mission
+                </Card.Title>
+                <Card.Text className="fs-5 text-muted lh-lg">
+                  Since our inception, our mission has remained steadfast — to
+                  be a reliable solution provider to our partners by offering
+                  durable, efficient cooling solutions.
+                  <br />
+                  <br />
+                  With a mission to serve as a beacon of cooling excellence, our
+                  cutting-edge refrigeration equipment caters to the unique
+                  needs of various sectors, including Hospitality and
+                  Restaurants, Retail and Supermarkets, and the Beverage
+                  industry.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
         {/* Values / Why Us cards */}
-        <h2 className="text-center mb-5">Our Core Values</h2>
-        <Row className="g-4">
-          <Col md={4}>
-            <Card className="h-100 text-center">
-              <Card.Body>
-                <div style={{ fontSize: '3rem', color: 'var(--primary-cool)' }}>
-                  ❄
-                </div>
-                <Card.Title>Quality First</Card.Title>
-                <Card.Text>
-                  We source only from certified manufacturers to ensure
-                  durability and performance.
-                </Card.Text>
-              </Card.Body>
+
+        <div className="text-center mb-5">
+          <h2 className="display-6 mb-4">Our Core Values</h2>
+          <p
+            className="lead text-muted"
+            style={{ maxWidth: '800px', margin: '0 auto' }}
+          >
+            The principles that guide everything we do at Coolhouse Trading
+          </p>
+        </div>
+
+        <Row className="g-4 justify-content-center">
+          {/* Innovation */}
+          <Col md={6} lg={3}>
+            <Card className="h-100 text-center border-0 shadow-sm p-4">
+              <div className="mb-3">
+                <span
+                  style={{ fontSize: '3.5rem', color: 'var(--primary-cool)' }}
+                >
+                  💡
+                </span>
+              </div>
+              <Card.Title className="fw-bold fs-4 mb-3">Innovation</Card.Title>
+              <Card.Text className="text-muted">
+                As thought leaders, we thrive on challenging the status quo,
+                driving change, and continuously improving our products for the
+                betterment of our customers and the environment.
+              </Card.Text>
             </Card>
           </Col>
-          <Col md={4}>
-            <Card className="h-100 text-center">
-              <Card.Body>
-                <div style={{ fontSize: '3rem', color: 'var(--primary-cool)' }}>
-                  ⚡
-                </div>
-                <Card.Title>Energy Efficiency</Card.Title>
-                <Card.Text>
-                  Supporting sustainable cooling solutions that reduce energy
-                  costs.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className="h-100 text-center">
-              <Card.Body>
-                <div style={{ fontSize: '3rem', color: 'var(--primary-cool)' }}>
+
+          {/* Respect */}
+          <Col md={6} lg={3}>
+            <Card className="h-100 text-center border-0 shadow-sm p-4">
+              <div className="mb-3">
+                <span
+                  style={{ fontSize: '3.5rem', color: 'var(--primary-cool)' }}
+                >
                   🤝
-                </div>
-                <Card.Title>Reliable Support</Card.Title>
-                <Card.Text>
-                  Fast delivery, after-sales service, and technical assistance
-                  you can count on.
-                </Card.Text>
-              </Card.Body>
+                </span>
+              </div>
+              <Card.Title className="fw-bold fs-4 mb-3">Respect</Card.Title>
+              <Card.Text className="text-muted">
+                We value the trust our partners place in us and honour our
+                commitments with respect for all stakeholders, customers, and
+                the environment.
+              </Card.Text>
+            </Card>
+          </Col>
+
+          {/* Teamwork */}
+          <Col md={6} lg={3}>
+            <Card className="h-100 text-center border-0 shadow-sm p-4">
+              <div className="mb-3">
+                <span
+                  style={{ fontSize: '3.5rem', color: 'var(--primary-cool)' }}
+                >
+                  👥
+                </span>
+              </div>
+              <Card.Title className="fw-bold fs-4 mb-3">Teamwork</Card.Title>
+              <Card.Text className="text-muted">
+                Together, we work in solidarity, pooling our strengths to help
+                our partners and customers achieve their goals.
+              </Card.Text>
+            </Card>
+          </Col>
+
+          {/* Optimism */}
+          <Col md={6} lg={3}>
+            <Card className="h-100 text-center border-0 shadow-sm p-4">
+              <div className="mb-3">
+                <span
+                  style={{ fontSize: '3.5rem', color: 'var(--primary-cool)' }}
+                >
+                  ⏳
+                </span>
+              </div>
+              <Card.Title className="fw-bold fs-4 mb-3">Optimism</Card.Title>
+              <Card.Text className="text-muted">
+                With a positive outlook and a problem-solving approach, we
+                confidently embrace the future, striving for the best outcomes.
+              </Card.Text>
             </Card>
           </Col>
         </Row>

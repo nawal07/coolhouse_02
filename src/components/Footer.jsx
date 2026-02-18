@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaPhoneAlt,
+  FaWhatsapp,
   FaEnvelope,
   FaMapMarkerAlt,
 } from 'react-icons/fa';
@@ -73,8 +74,8 @@ function Footer() {
                 </a>
               </li>
               <li className="mb-2">
-                <a className="links" href="/services">
-                  Services
+                <a className="links" href="/products">
+                  Products
                 </a>
               </li>
               <li className="mb-2">
@@ -87,17 +88,45 @@ function Footer() {
           <div className="col-md-3 mt-4">
             <h5 className="mb-4">Contact Us</h5>
             <p className="d-flex align-items-center gap-3">
-              <FaPhoneAlt /> +966530218322
+              <FaPhoneAlt />
+              <a
+                href="tel:+966114781100"
+                className="text-decoration-none text-reset"
+              >
+                +966 114 781 100
+              </a>
             </p>
             <p className="d-flex align-items-center gap-3">
-              <FaEnvelope /> info@coolhouse.com
+              <FaWhatsapp />
+              <a
+                href={`https://wa.me/919846851343?text=${encodeURIComponent("Hello! I'm contacting you from your website.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none text-white hover-text-primary"
+              >
+                +91 9846851343
+              </a>
+            </p>
+
+            <p className="d-flex align-items-center gap-3">
+              <FaEnvelope />
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=nawalsidiq077@gmail.com&su=Inquiry%20from%20Website"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none text-white hover-text-primary"
+              >
+                nawalsidiq077@gmail.com
+              </a>
             </p>
             <p className="d-flex align-items-center gap-3">
               <FaMapMarkerAlt /> Al Malaz , Saudi Arabia
             </p>
           </div>
         </div>
-        <p className='text-center pt-4 '>Copyright © 2025 COOL HOUSE. All rights reserved.</p>
+        <p className="text-center pt-4 ">
+          Copyright © 2025 COOL HOUSE. All rights reserved.
+        </p>
       </div>
     </footer>
   );
