@@ -115,9 +115,17 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-decoration-none text-white hover-text-primary"
-              > */}
+              > info@coolhousetrading.com
+              </a>*/}
 
               <a
+                href="mailto:info@coolhousetrading.com?subject=Inquiry%20from%20Coolhouse%20Website&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+                className="text-decoration-none text-white hover-text-primary"
+              >
+                info@coolhousetrading.com
+              </a>
+
+              {/* <a
                 href="googlegmail://co?to=info@coolhousetrading.com&subject=Inquiry%20from%20Coolhouse%20Website"
                 className="text-decoration-none text-white hover-text-primary"
                 onClick={e => {
@@ -130,7 +138,7 @@ function Footer() {
                 }}
               >
                 info@coolhousetrading.com
-              </a>
+              </a> */}
             </p>
             <p className="d-flex align-items-center gap-3">
               <FaMapMarkerAlt /> Al Malaz , Saudi Arabia
