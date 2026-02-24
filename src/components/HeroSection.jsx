@@ -15,6 +15,8 @@ function HeroSection() {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             minHeight: '85vh',
+            height: 'auto',
+            padding: '80px 20px',
           }}
         >
           <div
@@ -26,15 +28,26 @@ function HeroSection() {
             }}
           />
           <Container fluid style={{ position: 'relative', zIndex: 2 }}>
-            <h1 className=" snowflake-accent mb-4 fw-medium display-5">
+            <h1
+              className=" snowflake-accent display-4 mb-4"
+              style={{
+                fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+                lineHeight: '1.1',
+              }}
+            >
               The Future of Cooling Solutions
             </h1>
             <p
               className="lead mb-5 fs-4"
-              style={{ maxWidth: '900px', margin: '0 auto' }}
+              style={{
+                fontSize: 'clamp(1rem, 3vw, 1rem)',
+                lineHeight: '1.5',
+                maxWidth: '900px',
+                margin: '0 auto',
+              }}
             >
-              Leading the Future of Commercial Refrigeration &
-            Home Appliances in the Middle East.
+              Leading the Future of Commercial Refrigeration & Home Appliances
+              in the Middle East.
             </p>
             <div className="btn-group-single">
               <Button
@@ -47,6 +60,8 @@ function HeroSection() {
                   backgroundColor: '#111f5a',
                   borderColor: '#111f5a',
                   borderRadius: '10px',
+                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  minWidth: '150px',
                 }}
               >
                 Our Products
@@ -60,6 +75,8 @@ function HeroSection() {
                   color: '#ffffff',
                   borderColor: '#ffffff',
                   borderRadius: '10px',
+                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  minWidth: '150px',
                 }}
                 className="btn-contact"
               >
@@ -91,12 +108,23 @@ function HeroSection() {
           />
 
           <Container style={{ position: 'relative', zIndex: 2 }}>
-            <h1 className="snowflake-accent display-3 mb-4">
+            <h1
+              className="snowflake-accent display-4 mb-4"
+              style={{
+                fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+                lineHeight: '1.1',
+              }}
+            >
               Your Partner in Cooling and Comfort.
             </h1>
             <p
               className="lead mb-4"
-              style={{ maxWidth: '800px', margin: '0 auto' }}
+              style={{
+                maxWidth: '800px',
+                margin: '0 auto',
+                fontSize: 'clamp(1rem, 3vw, 1rem)',
+                lineHeight: '1.5',
+              }}
             >
               Trusted destination for commercial refrigeration equipment.
             </p>
@@ -107,6 +135,8 @@ function HeroSection() {
                   backgroundColor: '#111f5a',
                   borderColor: '#111f5a',
                   borderRadius: '10px',
+                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  minWidth: '150px',
                 }}
                 size="lg"
                 className="me-3"
@@ -124,6 +154,8 @@ function HeroSection() {
                   color: '#ffffff',
                   borderColor: '#ffffff',
                   borderRadius: '10px',
+                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  minWidth: '150px',
                 }}
                 className="btn-contact"
               >
@@ -155,12 +187,23 @@ function HeroSection() {
           />
 
           <Container style={{ position: 'relative', zIndex: 2 }}>
-            <h1 className="snowflake-accent display-3 mb-4">
+            <h1
+              className="snowflake-accent display-4 mb-4"
+              style={{
+                fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+                lineHeight: '1.1',
+              }}
+            >
               From Commercial Excellence to Home Comfort
             </h1>
             <p
               className="lead mb-4"
-              style={{ maxWidth: '800px', margin: '0 auto' }}
+              style={{
+                maxWidth: '800px',
+                margin: '0 auto',
+                fontSize: 'clamp(1rem, 3vw, 1rem)',
+                lineHeight: '1.5',
+              }}
             >
               Since 1960 – General Deluxe Quality
             </p>
@@ -175,6 +218,8 @@ function HeroSection() {
                   backgroundColor: '#111f5a',
                   borderColor: '#111f5a',
                   borderRadius: '10px',
+                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  minWidth: '150px',
                 }}
               >
                 Our Products
@@ -188,6 +233,8 @@ function HeroSection() {
                   color: '#ffffff',
                   borderColor: '#ffffff',
                   borderRadius: '10px',
+                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  minWidth: '150px',
                 }}
                 className="btn-contact"
               >
