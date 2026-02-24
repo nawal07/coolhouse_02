@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageHero from '../components/Hero';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import {
   FaFacebookF,
@@ -54,19 +55,26 @@ function Contact() {
 
   return (
     <div className="mt-5" style={{ backgroundColor: 'var(--bg-light)' }}>
+      <PageHero
+        title="Contact Us"
+        backgroundImage="/hero_1.jpg" // or any other image
+      />
       <Container fluid className="px-4 px-md-5">
         <div className="text-center mb-5 mt-5">
-          <h1 className="snowflake-accent display-5 fw-bold">Contact Us</h1>
-          <p className="lead text-muted">
-            We're here to help with all your cooling needs. Reach out and we’ll
-            respond promptly.
-          </p>
+          {/* <h1 className="snowflake-accent display-5 fw-bold">Contact Us</h1> */}
         </div>
 
         <Row className="g-4 contact-row">
           <Col lg={5}>
             <Card className="p-4 h-100 shadow-sm border-0">
-              <h4 className="mb-4">Get In Touch</h4>
+              <h1 className="mb-4" style={{ color: '#111f5a' }}>
+                Get In Touch
+              </h1>
+              <p className="text-muted">
+                Have questions about our commercial refrigeration systems? Our
+                team is ready to assist you with product details, pricing, and
+                custom solutions.
+              </p>
               <p>
                 <strong>Phone:</strong> +968 1234 5678
               </p>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageHero from '../components/Hero';
 import {
   Container,
   Row,
@@ -99,6 +100,42 @@ const products = [
       'Digital Thermometer',
     ],
   },
+
+  {
+    title: 'GVC 646 Upright Freezer (SLIM)',
+    shortDesc: '532 Liters | Black or White',
+    image: 'gvc_646.png',
+    specs: {
+      'Capacity (Liters)': '532',
+      'External Dimensions (W*D*H) cm': '80*68*200',
+    },
+    features: [
+      'Double tempered glass ',
+      'Adjustable shelves 5',
+      'Door Lock and self closing',
+      'Four wheels',
+      'LED Lights',
+    ],
+  },
+
+  {
+    title: 'GVC 1100 Refrigerator (Swing Doors)',
+    shortDesc: '1060 Liters | Black or White',
+    image: 'gvc_1100.png',
+    specs: {
+      'Capacity (Liters)': '1060',
+      'External Dimensions (W*D*H) cm': '120*728*200',
+    },
+    features: [
+      'Canopy and Without canopy',
+      'Vertical Bottle cooler ',
+      'Dynamic cooling (no-frost)',
+      'Double tempered glass door ',
+      'Double swing doors',
+      'Wide steel condenser with cooling fan',
+    ],
+  },
+
   {
     title: 'GVC 1106 Up-right Showcase Refrigerator (Double Swing Door)',
     shortDesc:
@@ -360,21 +397,25 @@ function Products() {
 
   return (
     <div
-      className="section py-5 mt-5"
+      className="section py-5"
       style={{ backgroundColor: 'var(--bg-light)' }}
     >
-      <Container fluid className="px-4 px-md-5">
-        <div className="text-center mb-5">
-          <h1 className="snowflake-accent display-5 fw-bold">Our Products</h1>
-          <p className="lead text-muted fs-4">
-            Premium Commercial Refrigeration Solutions – Upright Fridges &
-            Freezers
+      <PageHero title="Products" backgroundImage="/hero_1.jpg" />
+      <Container fluid className="px-4 px-md-5 mt-4">
+        <div className="text-center my-5">
+          <h2 className="snowflake-accent display-6 fw-bold ">
+            Commercial Fridges & Freezers | Cool House Products
+          </h2>
+          <p className="lead fs-4">
+            Explore Cool House commercial refrigeration products including
+            upright freezers, slim refrigerators, chest freezers, and double
+            door refrigerators.
           </p>
         </div>
 
         <Row className="g-4 g-lg-5">
           {products.map((product, index) => (
-            <Col md={6} lg={4} key={index}>
+            <Col md={6} lg={3} key={index}>
               <Card className="h-100 border-0 shadow-sm overflow-hidden transition-all hover-shadow">
                 <Card.Img
                   variant="top"

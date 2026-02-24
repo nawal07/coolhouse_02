@@ -102,17 +102,6 @@ img,
   transition: all 0.3s ease;
 }
 
-.btn-primary {
-  background-color: var(--primary-cool);
-  border-color: var(--primary-cool);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
-  transform: translateY(-2px);
-}
-
 /* Remove unwanted margins around buttons when alone */
 .btn-group-single {
   display: inline-block;

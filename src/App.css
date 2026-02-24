@@ -292,3 +292,248 @@ h6 {
     font-size: 28px;
   }
 }
+
+/* Trust Bar */
+.trust-bar {
+  background: #ffffff;
+}
+
+.trust-item {
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.trust-item:hover {
+  transform: translateY(-8px);
+}
+
+.trust-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(64, 196, 255, 0.08);
+}
+
+/* Decades of Excellence part  */
+.timeline-wrapper {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-line {
+  width: 6px;
+  background: #111f5a;
+  border-radius: 10px;
+  top: 40px;
+  bottom: 40px;
+  margin-left: 3rem;
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+
+.timeline-circle {
+  /* width: fit-content; */
+  /* height: 60px; */
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0d47a1;
+  background-color: #ffffff;
+  z-index: 2;
+  position: relative;
+}
+
+.dialog-box {
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  background-color: #0d47a1;
+  color: #ffffff;
+}
+
+.dialog-year {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dialog-arrow-right::after {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 50px;
+  border: 8px solid transparent;
+  border-left-color: #0c3b82;
+}
+
+.counter-item h3 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -1.5px;
+  color: #0d47a1;
+}
+
+/* ############################# */
+/* Mobile Screen Style  */
+/* ############################# */
+
+@media (max-width: 991px) {
+  .timeline-line {
+    margin-left: 0 !important;
+    transform: none;
+  }
+
+  .timeline-circle {
+    margin-left: 0 !important;
+  }
+
+  .dialog-box {
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  .dialog-arrow-left,
+  .dialog-arrow-right {
+    display: none;
+  }
+}
+
+/* Hero Component */
+
+.page-hero {
+  position: relative;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* extra overlay if needed */
+  z-index: 1;
+}
+
+.page-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.text-shadow {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb {
+  font-size: 1.1rem;
+}
+
+/* Market Opurtunity */
+
+.market-opportunity {
+  background-color: #40c4ff;
+}
+
+.market-opportunity .card {
+  border-radius: 16px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.market-opportunity .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(68, 160, 203, 0.18) !important;
+}
+
+.market-opportunity .rounded-circle {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Marquee Section of Logos  */
+
+.marquee-wrapper {
+  overflow: hidden;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll-left 40s linear infinite; 
+  will-change: transform;
+  min-width: 400%;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-item {
+  flex: 0 0 auto;
+}
+
+/* Optional: fade edges */
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.border-navy {
+  --bs-border-color: #111f5a !important;
+}
+
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #f8f9fa, transparent);
+}
+
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #f8f9fa, transparent);
+}
+
+@media (max-width: 576px) {
+  .marquee-track {
+    animation-duration: 20s;
+  }
+  .logo-item {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Optional */
+.logo-item img {
+  filter: grayscale(30%);
+  transition: filter 0.3s;
+}
+.logo-item:hover img {
+  filter: grayscale(0%);
+}
