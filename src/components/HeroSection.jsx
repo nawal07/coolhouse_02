@@ -33,8 +33,8 @@ function HeroSection() {
               className="lead mb-5 fs-4"
               style={{ maxWidth: '900px', margin: '0 auto' }}
             >
-              We offer an extensive range of commercial freezers, chest freezers
-              and upright Fridges at reasonable prices.
+              Leading the Future of Commercial Refrigeration &
+            Home Appliances in the Middle East.
             </p>
             <div className="btn-group-single">
               <Button
@@ -92,13 +92,13 @@ function HeroSection() {
 
           <Container style={{ position: 'relative', zIndex: 2 }}>
             <h1 className="snowflake-accent display-3 mb-4">
-              Trusted destination for commercial refrigeration equipment.
+              Your Partner in Cooling and Comfort.
             </h1>
             <p
               className="lead mb-4"
               style={{ maxWidth: '800px', margin: '0 auto' }}
             >
-              Ultra compact, convinient and made to fit anywhere.
+              Trusted destination for commercial refrigeration equipment.
             </p>
             <div className="btn-group-single">
               <Button
@@ -156,13 +156,13 @@ function HeroSection() {
 
           <Container style={{ position: 'relative', zIndex: 2 }}>
             <h1 className="snowflake-accent display-3 mb-4">
-              Sustainably cooler
+              From Commercial Excellence to Home Comfort
             </h1>
             <p
               className="lead mb-4"
               style={{ maxWidth: '800px', margin: '0 auto' }}
             >
-              Coolers that comes with ecofriendly hydrocarbon refrigerant.
+              Since 1960 – General Deluxe Quality
             </p>
             <div className="btn-group-single">
               <Button
