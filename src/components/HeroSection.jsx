@@ -15,8 +15,6 @@ function HeroSection() {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             minHeight: '85vh',
-            height: 'auto',
-            padding: '80px 20px',
           }}
         >
           <div
@@ -27,23 +25,24 @@ function HeroSection() {
               zIndex: 1,
             }}
           />
+
           <Container fluid style={{ position: 'relative', zIndex: 2 }}>
             <h1
-              className=" snowflake-accent display-4 mb-4"
+              className="snowflake-accent display-4 mb-4"
               style={{
-                fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+                fontSize: 'clamp(2rem, 6vw, 3rem)',
                 lineHeight: '1.1',
               }}
             >
-              The Future of Cooling Solutions
+              The Future of Cooling Solutions.
             </h1>
             <p
-              className="lead mb-5 fs-4"
+              className="lead mb-4"
               style={{
-                fontSize: 'clamp(1rem, 3vw, 1rem)',
-                lineHeight: '1.5',
-                maxWidth: '900px',
+                maxWidth: '800px',
                 margin: '0 auto',
+                fontSize: 'clamp(1rem, 5vw, 1.5rem)',
+                lineHeight: '1.5',
               }}
             >
               Leading the Future of Commercial Refrigeration & Home Appliances
@@ -52,17 +51,17 @@ function HeroSection() {
             <div className="btn-group-single">
               <Button
                 variant="primary"
-                size="lg"
-                className="me-3"
-                as={Link}
-                to="/products"
                 style={{
                   backgroundColor: '#111f5a',
                   borderColor: '#111f5a',
                   borderRadius: '10px',
-                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                   minWidth: '150px',
                 }}
+                size="lg"
+                className="me-3"
+                as={Link}
+                to="/products"
               >
                 Our Products
               </Button>
@@ -75,7 +74,7 @@ function HeroSection() {
                   color: '#ffffff',
                   borderColor: '#ffffff',
                   borderRadius: '10px',
-                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                   minWidth: '150px',
                 }}
                 className="btn-contact"
@@ -86,6 +85,7 @@ function HeroSection() {
           </Container>
         </div>
       </Carousel.Item>
+
       <Carousel.Item>
         <div
           className="hero text-center text-white d-flex align-items-center justify-content-center"
@@ -107,11 +107,11 @@ function HeroSection() {
             }}
           />
 
-          <Container style={{ position: 'relative', zIndex: 2 }}>
+          <Container fluid style={{ position: 'relative', zIndex: 2 }}>
             <h1
               className="snowflake-accent display-4 mb-4"
               style={{
-                fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+                fontSize: 'clamp(2rem, 6vw, 3rem)',
                 lineHeight: '1.1',
               }}
             >
@@ -122,7 +122,7 @@ function HeroSection() {
               style={{
                 maxWidth: '800px',
                 margin: '0 auto',
-                fontSize: 'clamp(1rem, 3vw, 1rem)',
+                fontSize: 'clamp(1rem, 5vw, 1.5rem)',
                 lineHeight: '1.5',
               }}
             >
@@ -135,7 +135,7 @@ function HeroSection() {
                   backgroundColor: '#111f5a',
                   borderColor: '#111f5a',
                   borderRadius: '10px',
-                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                   minWidth: '150px',
                 }}
                 size="lg"
@@ -154,7 +154,7 @@ function HeroSection() {
                   color: '#ffffff',
                   borderColor: '#ffffff',
                   borderRadius: '10px',
-                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                   minWidth: '150px',
                 }}
                 className="btn-contact"
@@ -186,11 +186,11 @@ function HeroSection() {
             }}
           />
 
-          <Container style={{ position: 'relative', zIndex: 2 }}>
+          <Container fluid style={{ position: 'relative', zIndex: 2 }}>
             <h1
               className="snowflake-accent display-4 mb-4"
               style={{
-                fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+                fontSize: 'clamp(2rem, 6vw, 3rem)',
                 lineHeight: '1.1',
               }}
             >
@@ -201,7 +201,7 @@ function HeroSection() {
               style={{
                 maxWidth: '800px',
                 margin: '0 auto',
-                fontSize: 'clamp(1rem, 3vw, 1rem)',
+                fontSize: 'clamp(1rem, 5vw, 1.5rem)',
                 lineHeight: '1.5',
               }}
             >
@@ -218,7 +218,7 @@ function HeroSection() {
                   backgroundColor: '#111f5a',
                   borderColor: '#111f5a',
                   borderRadius: '10px',
-                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                   minWidth: '150px',
                 }}
               >
@@ -233,7 +233,7 @@ function HeroSection() {
                   color: '#ffffff',
                   borderColor: '#ffffff',
                   borderRadius: '10px',
-                  fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                  fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                   minWidth: '150px',
                 }}
                 className="btn-contact"
