@@ -51,6 +51,9 @@ function DecadesOfExcellence() {
             <p className="lead" style={{ color: '#0000000' }}>
               OUR EVOLUTION SINCE 1960
             </p>
+            <p className="lead fw-medium" style={{ color: '#092f67' }}>
+              The Legacy of General Deluxe – Our Trusted Manufacturing Partner
+            </p>
           </div>
 
           {/* Timeline Container */}

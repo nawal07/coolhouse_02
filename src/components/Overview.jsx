@@ -17,8 +17,8 @@ function Overview() {
         <Container>
           <h2 className="section-heading">Who We Are</h2>
           <p className="section-subheading">
-            Coolhouse Trading – Leading the Future of Commercial Refrigeration &
-            Home Appliances in the Middle East.
+            Coolhouse Trading – Premium commercial refrigeration solutions for
+            modern businesses.
           </p>
 
           <Row className="align-items-center g-5">
@@ -26,6 +26,13 @@ function Overview() {
               <h3 className="fw-bold mb-4">
                 Your Partner in Cooling and Comfort.{' '}
               </h3>
+              <p className="lead" style={{ fontSize: '1rem' }}>
+                Your Authorized Distributor for General Deluxe in the Region.
+                Coolhouse Trading is the trusted and authorized distributor of{' '}
+                <span className="fw-bold">General Deluxe</span> commercial
+                refrigeration solutions in the Middle East with a strong focus
+                on Saudi Arabia.{' '}
+              </p>
               <p className="mb-4">
                 With a legacy dating back to 1960, the company has evolved from
                 a premium appliance importer into a fully integrated

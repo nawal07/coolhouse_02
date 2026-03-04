@@ -29,7 +29,7 @@ function PageHero({ title, backgroundImage = '/images/hero.jpg' }) {
             <li className="breadcrumb-item">
               <Link
                 to="/"
-                className="text-white text-decoration-none fw-medium"
+                className="breadcrumb-home text-white text-decoration-none fw-medium"
               >
                 Home
               </Link>
@@ -40,6 +40,7 @@ function PageHero({ title, backgroundImage = '/images/hero.jpg' }) {
             >
               {title}
             </li>
+            
           </ol>
         </nav>
       </Container>

@@ -21,8 +21,7 @@ function Footer() {
           <div className="col-md-3">
             <img className="" src="Logo_3_no_bg.png" alt="Cool House" />
             <p className="mt-3">
-              Supplying quality materials and trusted solutions across Saudi
-              Arabia.
+              Premium commercial refrigeration solutions for modern businesses.
             </p>
             <div className="d-flex gap-4 mt-4 mb-5">
               <a

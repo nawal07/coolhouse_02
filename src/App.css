@@ -428,13 +428,30 @@ h6 {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .breadcrumb {
   font-size: 1.1rem;
 }
+
+.breadcrumb-home:hover {
+  color:#0288d1 !important; 
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: none !important;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: ' > ';
+  color: white;
+  font-weight: 200;
+  margin: 0 0.5rem;
+}
+
+/* .breadcrumb-item.active {
+  color: white !important;
+  font-weight: 500;
+} */
 
 /* Market Opurtunity */
 

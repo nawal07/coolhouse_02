@@ -1,4 +1,3 @@
-
 import PageHero from '../components/Hero';
 import DecadesOfExcellence from '../components/DecadesOfExcellence';
 import MarketOpurtunity from '../components/MarketOppurtunity';
@@ -10,7 +9,6 @@ import TargetSegments from '../components/TargetSegments';
 import OurPartners from '../components/OurPartners';
 import FutureAndSustainability from '../components/FutureAndSustainability';
 import ExportsMap from '../components/ExportsMap';
-
 
 function About() {
   return (
@@ -27,9 +25,13 @@ function About() {
               Your Partner in Cooling and Comfort
             </h1>
             <p className="lead" style={{ fontSize: '1rem' }}>
-              Solutions, serving the Middle East market with a strong focus on
+              Your Authorized Distributor for General Deluxe in the Region.
+              Coolhouse Trading is the trusted and authorized distributor of{' '}
+              <span className="fw-bold">General Deluxe</span> commercial
+              refrigeration solutions in the Middle East with a strong focus on
               Saudi Arabia.{' '}
             </p>
+
             <p className="mb-4">
               With a legacy dating back to 1960, the company has evolved from a
               premium appliance importer into a fully integrated manufacturing
@@ -38,6 +40,14 @@ function About() {
               service, healthcare, and beverage sectors, delivering
               high-performance refrigeration systems designed for reliability,
               efficiency, and long-term operational value.
+            </p>
+            <p className="mb-4">
+              We are proud to be affiliated with the Jordan-based manufacturer
+              behind General Deluxe, a globally respected name in high-quality
+              upright fridges, freezers, and commercial cooling equipment. With
+              decades of expertise from our manufacturing partner, we bring
+              certified, energy-efficient, and durable products to supermarkets,
+              hotels, restaurants, and beverage sectors across the region.
             </p>
             <Button
               variant="primary"
@@ -83,8 +93,7 @@ function About() {
         <FutureAndSustainability />
 
         {/* EXPORT MAP */}
-        <ExportsMap/>
-        
+        <ExportsMap />
       </Container>
     </div>
   );

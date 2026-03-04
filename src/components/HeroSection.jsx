@@ -34,7 +34,7 @@ function HeroSection() {
                 lineHeight: '1.1',
               }}
             >
-              The Future of Cooling Solutions.
+              General Deluxe Upright Fridges & Freezers.
             </h1>
             <p
               className="lead mb-4"
@@ -45,8 +45,8 @@ function HeroSection() {
                 lineHeight: '1.5',
               }}
             >
-              Leading the Future of Commercial Refrigeration & Home Appliances
-              in the Middle East.
+              Premium commercial refrigeration solutions by General Deluxe –
+              distributed exclusively by Coolhouse Trading.
             </p>
             <div className="btn-group-single">
               <Button
@@ -115,7 +115,7 @@ function HeroSection() {
                 lineHeight: '1.1',
               }}
             >
-              Your Partner in Cooling and Comfort.
+              The Future of Cooling Solutions.
             </h1>
             <p
               className="lead mb-4"
@@ -126,7 +126,8 @@ function HeroSection() {
                 lineHeight: '1.5',
               }}
             >
-              Trusted destination for commercial refrigeration equipment.
+              Leading the Future of Commercial Refrigeration & Home Appliances
+              in the Middle East.
             </p>
             <div className="btn-group-single">
               <Button
@@ -194,7 +195,7 @@ function HeroSection() {
                 lineHeight: '1.1',
               }}
             >
-              From Commercial Excellence to Home Comfort
+              Your Partner in Cooling and Comfort.
             </h1>
             <p
               className="lead mb-4"
@@ -205,7 +206,8 @@ function HeroSection() {
                 lineHeight: '1.5',
               }}
             >
-              Since 1960 – General Deluxe Quality
+              Trusted Commercial Refrigeration Solutions for Modern Businesses &
+              Home Comfort Across the Region
             </p>
             <div className="btn-group-single">
               <Button

@@ -20,16 +20,17 @@ function OurProducts() {
             <Card className="h-100 border-0 shadow-sm overflow-hidden">
               <Card.Img
                 variant="top"
-                src="double_door_img.png"
+                className="mt-3"
+                src="double_door_img.jpg"
                 style={{
                   height: '250px',
                   objectFit: 'contain',
-                  background: 'rgb(29 39 79)',
+                  // background: 'rgb(29 39 79)',
                 }}
               />
               <Card.Body className="text-center p-4">
                 <h5 className="fw-bold mt-3">Double Door GVC 1100</h5>
-                <p className="text-muted small">1100 liters</p>
+                {/* <p className="text-muted small">1100 liters</p> */}
               </Card.Body>
             </Card>
           </Col>
@@ -38,16 +39,17 @@ function OurProducts() {
             <Card className="h-100 border-0 shadow-sm overflow-hidden">
               <Card.Img
                 variant="top"
-                src="single_door_img.png"
+                className="mt-3"
+                src="single_door_img.jpg"
                 style={{
                   height: '250px',
                   objectFit: 'contain',
-                  background: 'rgb(29 39 79)',
+                  // background: 'rgb(29 39 79)',
                 }}
               />
               <Card.Body className="text-center p-4">
                 <h5 className="fw-bold mt-3">Single Door GVC 640</h5>
-                <p className="text-muted small">530 liters</p>
+                {/* <p className="text-muted small">530 liters</p> */}
               </Card.Body>
             </Card>
           </Col>
@@ -56,52 +58,17 @@ function OurProducts() {
             <Card className="h-100 border-0 shadow-sm overflow-hidden">
               <Card.Img
                 variant="top"
-                src="upright_freezer_img.png"
+                className="mt-3"
+                src="upright_freezer_img.jpg"
                 style={{
                   height: '250px',
                   objectFit: 'contain',
-                  background: 'rgb(29 39 79)',
+                  // background: 'rgb(29 39 79)',
                 }}
               />
               <Card.Body className="text-center p-4">
                 <h5 className="fw-bold mt-3">Upright Freezer GVF 565</h5>
-                <p className="text-muted small">465 liters</p>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col ms={12}>
-            <Card className="h-100 border-0 shadow-sm overflow-hidden">
-              <Card.Img
-                variant="top"
-                src="single_door_slim_img.png"
-                style={{
-                  height: '250px',
-                  objectFit: 'contain',
-                  background: 'rgb(29 39 79)',
-                }}
-              />
-              <Card.Body className="text-center p-4">
-                <h5 className="fw-bold mt-3">Single Door Slim GVC 406</h5>
-                <p className="text-muted small">320 liters</p>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col ms={12}>
-            <Card className="h-100 border-0 shadow-sm overflow-hidden">
-              <Card.Img
-                variant="top"
-                src="chest_freezer_img.png"
-                style={{
-                  height: '250px',
-                  objectFit: 'contain',
-                  background: 'rgb(29 39 79)',
-                }}
-              />
-              <Card.Body className="text-center p-4">
-                <h5 className="fw-bold mt-3">Chest Freezer GSC 407</h5>
-                <p className="text-muted small">376 liters</p>
+                {/* <p className="text-muted small">465 liters</p> */}
               </Card.Body>
             </Card>
           </Col>
