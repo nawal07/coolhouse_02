@@ -48,11 +48,11 @@ function DecadesOfExcellence() {
             <h2 className="display-5 fw-bold" style={{ color: '#0d47a1' }}>
               DECADES OF EXCELLENCE
             </h2>
-            <p className="lead" style={{ color: '#0000000' }}>
-              OUR EVOLUTION SINCE 1960
-            </p>
             <p className="lead fw-medium" style={{ color: '#092f67' }}>
               The Legacy of General Deluxe – Our Trusted Manufacturing Partner
+            </p>
+            <p className="lead" style={{ color: '#0000000' }}>
+              EVOLUTION SINCE 1960
             </p>
           </div>
 

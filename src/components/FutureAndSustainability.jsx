@@ -7,9 +7,11 @@ function FutureAndSustainability() {
   return (
     <div className="section" style={{ background: '#e6f2ff' }}>
       <div className="text-center mb-5">
-        <h2 className="display-6 mb-4">Future & Sustainability</h2>
+        <h2 className="display-6 mb-4 fw-bold" style={{ color: '#111f5a' }}>
+          Future & Sustainability
+        </h2>
         <p
-          className="lead text-muted"
+          className="lead fw-medium"
           style={{ maxWidth: '800px', margin: '0 auto' }}
         >
           The Strategic Roadmap for Growth & Commitment.

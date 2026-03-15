@@ -22,14 +22,23 @@ function About() {
         <Row className="align-items-center mb-5 g-4 px-4 px-md-5 ">
           <Col lg={6}>
             <h1 className="snowflake-accent mb-4" style={{ fontSize: '2rem' }}>
-              Your Partner in Cooling and Comfort
+              Authorized Distributor of General Deluxe
             </h1>
+            <p className="lead text-muted mb-4" style={{ fontSize: '1.1rem' }}>
+              Coolhouse Trading is the official trading partner and authorized
+              distributor of
+              <strong> General Deluxe</strong>, a leading Jordanian manufacturer
+              of premium refrigeration solutions.
+            </p>
             <p className="lead" style={{ fontSize: '1rem' }}>
               Your Authorized Distributor for General Deluxe in the Region.
               Coolhouse Trading is the trusted and authorized distributor of{' '}
               <span className="fw-bold">General Deluxe</span> commercial
               refrigeration solutions in the Middle East with a strong focus on
-              Saudi Arabia.{' '}
+              Saudi Arabia. We bring both{' '}
+              <strong>commercial refrigeration equipment</strong> and
+              <strong> home appliances</strong> to the Middle East market with
+              unmatched quality and reliability.
             </p>
 
             <p className="mb-4">
@@ -49,6 +58,7 @@ function About() {
               certified, energy-efficient, and durable products to supermarkets,
               hotels, restaurants, and beverage sectors across the region.
             </p>
+
             <Button
               variant="primary"
               style={{
@@ -87,7 +97,7 @@ function About() {
         <TargetSegments />
 
         {/* <!-- Trusted Partners Marquee Section --> */}
-        <OurPartners />
+        {/* <OurPartners /> */}
 
         {/*  GROWTH & COMMITMENT */}
         <FutureAndSustainability />

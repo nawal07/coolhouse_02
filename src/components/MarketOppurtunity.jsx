@@ -5,14 +5,20 @@ import { FaDolly, FaRegSnowflake } from 'react-icons/fa';
 
 function MarketOpportunity() {
   return (
-    <section className="market-opportunity py-5 " style={{background:'#e6f2ff'}}>
+    <section
+      className="market-opportunity py-5 "
+      style={{ background: '#e6f2ff' }}
+    >
       <Container>
         <div className="text-center mb-5">
           <h2 className="display-6 fw-bold" style={{ color: '#111f5a' }}>
             Saudi Arabian Market Oppurtunity
           </h2>
-          <p className="lead fw-medium">
-            Strategic alignment with VISION 2030
+          <p className="lead fw-medium">Strategic alignment with VISION 2030</p>
+          <p className="text-muted">
+            We support the Kingdom’s growth in retail, hospitality, cold chain
+            logistics, and sustainable home solutions through modern,
+            energy-efficient refrigeration systems.
           </p>
         </div>
 

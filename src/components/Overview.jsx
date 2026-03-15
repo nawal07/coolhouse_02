@@ -17,8 +17,8 @@ function Overview() {
         <Container>
           <h2 className="section-heading">Who We Are</h2>
           <p className="section-subheading">
-            Coolhouse Trading – Premium commercial refrigeration solutions for
-            modern businesses.
+            The official trading partner and authorized distributor of
+            <strong> General Deluxe</strong>.
           </p>
 
           <Row className="align-items-center g-5">

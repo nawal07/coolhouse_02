@@ -7,13 +7,15 @@ function TargetSegments() {
   return (
     <div className="section px-4 px-md-5 ">
       <div className="text-center mb-5">
-        <h2 className="display-6 mb-4">Target B2B Segments</h2>
-        <p
+        <h2 className="display-6 mb-4">
+          Serving Diverse Industries Across the Region.
+        </h2>
+        {/* <p
           className="lead text-muted"
           style={{ maxWidth: '800px', margin: '0 auto' }}
         >
           Serving Diverse Industries Across the Region.
-        </p>
+        </p> */}
       </div>
       <div className="col-lg-8 col-xl-5 max-w-6xl mx-auto">
         <Stack gap={4} className="mt-4">
