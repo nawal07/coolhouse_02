@@ -554,3 +554,52 @@ h6 {
 .logo-item:hover img {
   filter: grayscale(0%);
 }
+
+/* Hero Section Media Queries & Classes */
+.hero-slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 85vh;
+}
+.hero-slide-contain {
+  background-size: contain;
+}
+.hero-slide-cover {
+  background-size: cover;
+}
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.1;
+}
+.hero-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .hero-slide {
+    min-height: 45vh !important;
+  }
+  .hero-slide-contain {
+    background-size: contain !important; 
+    background-position: center !important;
+  }
+  .hero-slide-cover {
+    background-size: cover !important;
+  }
+  .hero-title {
+    font-size: 1.75rem !important;
+    padding: 0 15px;
+  }
+  .hero-desc {
+    font-size: 0.9rem !important;
+    padding: 0 25px !important;
+  }
+  .hero-btn {
+    font-size: 0.9rem !important;
+    min-width: 120px !important;
+    padding: 10px 20px !important;
+  }
+}

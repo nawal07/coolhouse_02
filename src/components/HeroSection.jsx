@@ -7,14 +7,9 @@ function HeroSection() {
     <Carousel fade interval={2000} indicators={true} controls={true}>
       <Carousel.Item>
         <div
-          className="hero text-center text-white d-flex align-items-center justify-content-center"
+          className="hero hero-slide hero-slide-contain text-center text-white d-flex align-items-center justify-content-center"
           style={{
             backgroundImage: `url('/hero_1.png')`,
-            // backgroundImage: `url('/carousel_1.png')`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            minHeight: '85vh',
           }}
         >
           <div
@@ -27,24 +22,10 @@ function HeroSection() {
           />
 
           <Container fluid style={{ position: 'relative', zIndex: 2 }}>
-            <h1
-              className="snowflake-accent display-4 mb-4"
-              style={{
-                fontSize: 'clamp(2rem, 6vw, 3rem)',
-                lineHeight: '1.1',
-              }}
-            >
+            <h1 className="snowflake-accent display-4 mb-4 hero-title">
               General Deluxe Upright Fridges & Freezers.
             </h1>
-            <p
-              className="lead mb-4"
-              style={{
-                maxWidth: '800px',
-                margin: '0 auto',
-                fontSize: 'clamp(1rem, 5vw, 1.5rem)',
-                lineHeight: '1.5',
-              }}
-            >
+            <p className="lead mb-4 hero-desc">
               Premium commercial refrigeration solutions by General Deluxe –
               distributed exclusively by Coolhouse Trading.
             </p>
@@ -87,14 +68,9 @@ function HeroSection() {
       </Carousel.Item>
       <Carousel.Item>
         <div
-          className="hero text-center text-white d-flex align-items-center justify-content-center"
+          className="hero hero-slide hero-slide-contain text-center text-white d-flex align-items-center justify-content-center"
           style={{
             backgroundImage: `url('/hero_2.jpg')`,
-            // backgroundImage: `url('/carousel_2.png')`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            minHeight: '85vh',
           }}
         >
           <div
@@ -107,24 +83,10 @@ function HeroSection() {
           />
 
           <Container fluid style={{ position: 'relative', zIndex: 2 }}>
-            <h1
-              className="snowflake-accent display-4 mb-4"
-              style={{
-                fontSize: 'clamp(2rem, 6vw, 3rem)',
-                lineHeight: '1.1',
-              }}
-            >
+            <h1 className="snowflake-accent display-4 mb-4 hero-title">
               The Future of Cooling Solutions.
             </h1>
-            <p
-              className="lead mb-4"
-              style={{
-                maxWidth: '800px',
-                margin: '0 auto',
-                fontSize: 'clamp(1rem, 5vw, 1.5rem)',
-                lineHeight: '1.5',
-              }}
-            >
+            <p className="lead mb-4 hero-desc">
               Leading the Future of Commercial Refrigeration & Home Appliances
               in the Middle East.
             </p>
@@ -167,14 +129,9 @@ function HeroSection() {
       </Carousel.Item>
       <Carousel.Item>
         <div
-          className="hero text-center text-white d-flex align-items-center justify-content-center"
+          className="hero hero-slide hero-slide-contain text-center text-white d-flex align-items-center justify-content-center"
           style={{
             backgroundImage: ` url('/hero_3.jpg')`,
-            // backgroundImage: ` url('/carousel_3.png')`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            minHeight: '85vh',
           }}
         >
           <div
@@ -187,24 +144,10 @@ function HeroSection() {
           />
 
           <Container fluid style={{ position: 'relative', zIndex: 2 }}>
-            <h1
-              className="snowflake-accent display-4 mb-4"
-              style={{
-                fontSize: 'clamp(2rem, 6vw, 3rem)',
-                lineHeight: '1.1',
-              }}
-            >
+            <h1 className="snowflake-accent display-4 mb-4 hero-title">
               Your Partner in Cooling and Comfort.
             </h1>
-            <p
-              className="lead mb-4"
-              style={{
-                maxWidth: '800px',
-                margin: '0 auto',
-                fontSize: 'clamp(1rem, 5vw, 1.5rem)',
-                lineHeight: '1.5',
-              }}
-            >
+            <p className="lead mb-4 hero-desc">
               Trusted Commercial Refrigeration Solutions for Modern Businesses &
               Home Comfort Across the Region
             </p>
@@ -247,14 +190,9 @@ function HeroSection() {
       </Carousel.Item>
       <Carousel.Item>
         <div
-          className="hero text-center text-white d-flex align-items-center justify-content-center"
+          className="hero hero-slide hero-slide-cover text-center text-white d-flex align-items-center justify-content-center"
           style={{
             backgroundImage: ` url('/hero_4.png')`,
-            // backgroundImage: ` url('/carousel_3.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            minHeight: '85vh',
           }}
         >
           <div
@@ -267,24 +205,10 @@ function HeroSection() {
           />
 
           <Container fluid style={{ position: 'relative', zIndex: 2 }}>
-            <h1
-              className="snowflake-accent display-4 mb-4"
-              style={{
-                fontSize: 'clamp(2rem, 6vw, 3rem)',
-                lineHeight: '1.1',
-              }}
-            >
+            <h1 className="snowflake-accent display-4 mb-4 hero-title">
               Your Partner in Cooling and Comfort.
             </h1>
-            <p
-              className="lead mb-4"
-              style={{
-                maxWidth: '800px',
-                margin: '0 auto',
-                fontSize: 'clamp(1rem, 5vw, 1.5rem)',
-                lineHeight: '1.5',
-              }}
-            >
+            <p className="lead mb-4 hero-desc">
               Trusted Commercial Refrigeration Solutions for Modern Businesses &
               Home Comfort Across the Region
             </p>
