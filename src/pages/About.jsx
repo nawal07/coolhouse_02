@@ -16,7 +16,7 @@ function About() {
       className="section d-flex flex-column justify-content-center p-0"
       style={{ backgroundColor: 'var(--bg-light)' }}
     >
-      <PageHero title="About Us" backgroundImage="/hero_1.jpg" />
+      <PageHero title="About Us" backgroundImage="/hero.jpg" />
 
       <Container fluid className="p-0 mt-5">
         <Row className="align-items-center mb-5 g-4 px-4 px-md-5 ">
@@ -31,8 +31,8 @@ function About() {
               of premium refrigeration solutions.
             </p>
             <p className="lead" style={{ fontSize: '1rem' }}>
-              Your Authorized Distributor for General Deluxe in the Region.
-              Coolhouse Trading is the trusted and authorized distributor of{' '}
+              Authorized Distributor for General Deluxe in the Region. Coolhouse
+              Trading is the trusted and authorized distributor of{' '}
               <span className="fw-bold">General Deluxe</span> commercial
               refrigeration solutions in the Middle East with a strong focus on
               Saudi Arabia. We bring both{' '}

@@ -400,7 +400,7 @@ function Products() {
       className="section py-5"
       style={{ backgroundColor: 'var(--bg-light)' }}
     >
-      <PageHero title="Products" backgroundImage="/hero_1.jpg" />
+      <PageHero title="Products" backgroundImage="/hero.jpg" />
       <Container fluid className="px-4 px-md-5 mt-4">
         <div className="text-center my-5">
           <h2 className="snowflake-accent display-6 fw-bold ">

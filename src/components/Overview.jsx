@@ -46,9 +46,10 @@ function Overview() {
                 Discover More
               </Button>
             </Col>
-            <Col lg={6}>
+            <Col lg={1}></Col>
+            <Col lg={5}>
               <img
-                src="who_we_are.jpg"
+                src="who_we_are1.jpg"
                 alt="Who We are"
                 className="img-fluid rounded-4 shadow"
               />

@@ -57,7 +57,7 @@ function Contact() {
     <div className="mt-5" style={{ backgroundColor: 'var(--bg-light)' }}>
       <PageHero
         title="Contact Us"
-        backgroundImage="/hero_1.jpg" // or any other image
+        backgroundImage="/hero.jpg" // or any other image
       />
       <Container fluid className="px-4 px-md-5">
         <div className="text-center mb-5 mt-5">
