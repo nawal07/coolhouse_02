@@ -26,8 +26,8 @@ function HeroSection() {
               General Deluxe Upright Fridges & Freezers.
             </h1>
             <p className="lead mb-4 hero-desc">
-              Premium commercial refrigeration solutions by General Deluxe –
-              distributed exclusively by Coolhouse Trading.
+              Premium commercial refrigeration solutions for modern businesses —
+              distributed by Coolhouse Trading.
             </p>
             <div className="btn-group-single">
               <Button
