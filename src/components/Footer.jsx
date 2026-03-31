@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   FaFacebookF,
   FaTwitter,
@@ -63,24 +64,24 @@ function Footer() {
             <h5 className="mb-4">Quick Links</h5>
             <ul style={{ listStyleType: 'none', padding: 0 }}>
               <li className="mb-2">
-                <a className="links" href="/">
+                <Link className="links" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a className="links" href="/about">
+                <Link className="links" to="/about">
                   About
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a className="links" href="/products">
+                <Link className="links" to="/products">
                   Products
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a className="links" href="/contact">
+                <Link className="links" to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
