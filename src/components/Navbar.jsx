@@ -29,7 +29,7 @@ function Navbar() {
       <BSNavbar.Brand as={NavLink} to="/">
         <img
           src="/Logo_no_bg.png"
-          alt="Coolhouse Trading"
+          alt="Cool House Trading"
           style={{ height: '50px' }}
         />
       </BSNavbar.Brand>

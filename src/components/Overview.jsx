@@ -27,8 +27,7 @@ function Overview() {
                 Your Partner in Cooling and Comfort.{' '}
               </h3>
               <p className="lead" style={{ fontSize: '1rem' }}>
-                Your Authorized Distributor for General Deluxe in the Region.
-                Coolhouse Trading is the trusted and authorized distributor of{' '}
+                Cool house Trading is the trusted and authorized distributor of{' '}
                 <span className="fw-bold">General Deluxe</span> commercial
                 refrigeration solutions in the Middle East with a strong focus
                 on Saudi Arabia.{' '}
@@ -49,7 +48,7 @@ function Overview() {
             <Col lg={1}></Col>
             <Col lg={5}>
               <img
-                src="who_we_are1.jpg"
+                src="who_we_are.png"
                 alt="Who We are"
                 className="img-fluid rounded-4 shadow"
               />

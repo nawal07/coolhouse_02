@@ -9,14 +9,14 @@ function HeroSection() {
         <div
           className="hero hero-slide hero-slide-contain text-center text-white d-flex align-items-center justify-content-center"
           style={{
-            backgroundImage: `url('/hero_1.png')`,
+            backgroundImage: `url('/hero_01.png')`,
           }}
         >
           <div
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'rgba(0, 0, 0, 0.45)',
+              background: 'rgba(0, 0, 0, 0.40)',
               zIndex: 1,
             }}
           />
@@ -27,7 +27,7 @@ function HeroSection() {
             </h1>
             <p className="lead mb-4 hero-desc">
               Premium commercial refrigeration solutions for modern businesses —
-              distributed by Coolhouse Trading.
+              distributed by Cool House Trading.
             </p>
             <div className="btn-group-single">
               <Button
@@ -70,14 +70,14 @@ function HeroSection() {
         <div
           className="hero hero-slide hero-slide-contain text-center text-white d-flex align-items-center justify-content-center"
           style={{
-            backgroundImage: `url('/hero_2.jpg')`,
+            backgroundImage: `url('/hero_2.png')`,
           }}
         >
           <div
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'rgba(0, 0, 0, 0.45)',
+              background: 'rgba(0, 0, 0, 0.40)',
               zIndex: 1,
             }}
           />
@@ -131,14 +131,14 @@ function HeroSection() {
         <div
           className="hero hero-slide hero-slide-contain text-center text-white d-flex align-items-center justify-content-center"
           style={{
-            backgroundImage: ` url('/hero_3.jpg')`,
+            backgroundImage: ` url('/hero_3.png')`,
           }}
         >
           <div
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'rgba(0, 0, 0, 0.45)',
+              background: 'rgba(0, 0, 0, 0.40)',
               zIndex: 1,
             }}
           />
@@ -190,7 +190,7 @@ function HeroSection() {
       </Carousel.Item>
       <Carousel.Item>
         <div
-          className="hero hero-slide hero-slide-cover text-center text-white d-flex align-items-center justify-content-center"
+          className="hero hero-slide hero-slide-contain text-center text-white d-flex align-items-center justify-content-center"
           style={{
             backgroundImage: ` url('/hero_4.png')`,
           }}
@@ -199,7 +199,7 @@ function HeroSection() {
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'rgba(0, 0, 0, 0.45)',
+              background: 'rgba(0, 0, 0, 0.40)',
               zIndex: 1,
             }}
           />

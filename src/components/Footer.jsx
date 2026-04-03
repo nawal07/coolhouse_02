@@ -111,7 +111,7 @@ function Footer() {
             <p className="d-flex align-items-center gap-3">
               <FaEnvelope />
               <a
-                href="mailto:info@coolhousetrading.com?subject=Inquiry%20from%20Coolhouse%20Website&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+                href="mailto:info@coolhousetrading.com?subject=Inquiry%20from%20Cool%20House%20Website&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
                 className="text-decoration-none text-white hover-text-primary"
               >
                 info@coolhousetrading.com

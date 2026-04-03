@@ -1,5 +1,6 @@
-/* Coolhouse Theme - Import Google Fonts if needed */
+/* Cool house Theme - Import Google Fonts if needed */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+
 html,
 body,
 #root {
@@ -42,6 +43,7 @@ img {
   .d-lg-none {
     display: none !important;
   }
+
   .d-none.d-lg-flex {
     display: flex !important;
   }
@@ -51,6 +53,7 @@ img {
   .d-none.d-lg-flex {
     display: none !important;
   }
+
   .d-lg-none {
     display: flex !important;
   }
@@ -131,6 +134,7 @@ h6 {
     border-bottom: none !important;
   }
 }
+
 .get-started-btn {
   background-color: #111f5a !important;
   color: white !important;
@@ -276,6 +280,7 @@ h6 {
     transform: scale(0.9);
     opacity: 1;
   }
+
   100% {
     transform: scale(1.5);
     opacity: 0;
@@ -415,11 +420,12 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* extra overlay if needed */
+  background: rgba(0, 0, 0, 0.3);
+  /* extra overlay if needed */
   z-index: 1;
 }
 
-.page-hero > * {
+.page-hero>* {
   position: relative;
   z-index: 2;
 }
@@ -433,11 +439,11 @@ h6 {
 }
 
 .breadcrumb-home:hover {
-  color:#0288d1 !important; 
+  color: #0288d1 !important;
   transition: color 0.2s ease;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   content: none !important;
 }
 
@@ -501,6 +507,7 @@ h6 {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -540,6 +547,7 @@ h6 {
   .marquee-track {
     animation-duration: 20s;
   }
+
   .logo-item {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -551,6 +559,7 @@ h6 {
   filter: grayscale(30%);
   transition: filter 0.3s;
 }
+
 .logo-item:hover img {
   filter: grayscale(0%);
 }
@@ -561,42 +570,53 @@ h6 {
   background-repeat: no-repeat;
   min-height: 85vh;
 }
+
 .hero-slide-contain {
   background-size: contain;
 }
+
 .hero-slide-cover {
   background-size: cover;
 }
+
 .hero-title {
   font-size: clamp(2rem, 6vw, 3rem);
   line-height: 1.1;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
 }
+
 .hero-desc {
   max-width: 800px;
   margin: 0 auto;
   font-size: clamp(1rem, 5vw, 1.5rem);
   line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.85);
 }
 
 @media (max-width: 768px) {
   .hero-slide {
     min-height: 45vh !important;
   }
+
   .hero-slide-contain {
-    background-size: contain !important; 
+    background-size: contain !important;
     background-position: center !important;
   }
+
   .hero-slide-cover {
     background-size: cover !important;
   }
+
   .hero-title {
     font-size: 1.75rem !important;
     padding: 0 15px;
   }
+
   .hero-desc {
     font-size: 0.9rem !important;
     padding: 0 25px !important;
   }
+
   .hero-btn {
     font-size: 0.9rem !important;
     min-width: 120px !important;

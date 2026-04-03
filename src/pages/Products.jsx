@@ -384,9 +384,50 @@ const products = [
   },
 ];
 
+// Helper: determine canopy status from features
+const getCanopyStatus = product => {
+  const feats = product.features || [];
+  const hasBoth = feats.some(f => f.toLowerCase().includes('and without'));
+  const hasCanopy = feats.some(f => f.toLowerCase() === 'canopy');
+  if (hasBoth) return 'both';
+  if (hasCanopy) return 'with';
+  return 'without';
+};
+
+const SECTIONS = [
+  {
+    id: 'single',
+    title: 'Single Door Models',
+    filter: p =>
+      p.title.includes('Single Door') || p.title.includes('SLIM') || p.title.includes('GVF'),
+  },
+  {
+    id: 'double',
+    title: 'Double & Multi-Door Models',
+    filter: p =>
+      p.title.includes('Double') ||
+      p.title.includes('Swing Door') ||
+      p.title.includes('3 Swing Doors') ||
+      p.title.includes('Sliding Door'),
+  },
+  {
+    id: 'chest',
+    title: 'Chest Freezers',
+    filter: p => p.title.includes('Chest Freezer'),
+  },
+];
+
+const CANOPY_OPTIONS = [
+  { value: 'all', label: 'All Models' },
+  { value: 'with', label: 'With Canopy' },
+  { value: 'without', label: 'Without Canopy' },
+  { value: 'both', label: 'With & Without Canopy' },
+];
+
 function Products() {
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [canopyFilter, setCanopyFilter] = useState('all');
 
   const handleShow = product => {
     setSelectedProduct(product);
@@ -394,6 +435,9 @@ function Products() {
   };
 
   const handleClose = () => setShowModal(false);
+
+  const applyCanopyFilter = items =>
+    canopyFilter === 'all' ? items : items.filter(p => getCanopyStatus(p) === canopyFilter);
 
   return (
     <div
@@ -403,8 +447,8 @@ function Products() {
       <PageHero title="Products" backgroundImage="/hero.jpg" />
       <Container fluid className="px-4 px-md-5 mt-4">
         <div className="text-center my-5">
-          <h2 className="snowflake-accent display-6 fw-bold ">
-            Commercial Fridges & Freezers | Cool House Products
+          <h2 className="snowflake-accent display-6 fw-bold">
+            Commercial Fridges &amp; Freezers | Cool House Products
           </h2>
           <p className="lead fs-4">
             Explore Cool House commercial refrigeration products including
@@ -413,51 +457,117 @@ function Products() {
           </p>
         </div>
 
-        <Row className="g-4 g-lg-5">
-          {products.map((product, index) => (
-            <Col md={6} lg={3} key={index}>
-              <Card className="h-100 border-0 shadow-sm overflow-hidden transition-all hover-shadow">
-                <Card.Img
-                  variant="top"
-                  src={product.image}
-                  alt={product.title}
-                  style={{ height: '280px', objectFit: 'cover' }}
-                />
-                <Card.Body className="text-center p-4 d-flex flex-column">
-                  <div
-                    style={{ fontSize: '3.5rem', color: 'var(--primary-cool)' }}
-                  >
-                    {product.icon || '❄'}
-                  </div>
-                  <Card.Title className="mt-3 fw-bold fs-4">
-                    {product.title}
-                  </Card.Title>
-                  <Card.Text className="text-muted small flex-grow-1 mt-2">
-                    {product.shortDesc}
-                  </Card.Text>
-                </Card.Body>
-                <Card.Footer className="bg-white border-0 text-center pb-4">
-                  <Button
-                    variant="primary"
-                    style={{
-                      backgroundColor: '#111f5a',
-                      borderColor: '#111f5a',
-                      borderRadius: '20px',
-                    }}
-                    size="sm"
-                    className="px-4 me-2"
-                    onClick={() => handleShow(product)}
-                  >
-                    View Details
-                  </Button>
-                  {/* <Button variant="outline-primary" size="sm" className="px-4">
-                    Request Quote
-                  </Button> */}
-                </Card.Footer>
-              </Card>
-            </Col>
+        {/* ── Canopy Filter Buttons ── */}
+        <div className="d-flex flex-wrap justify-content-center gap-2 mb-5">
+          {CANOPY_OPTIONS.map(opt => (
+            <button
+              key={opt.value}
+              onClick={() => setCanopyFilter(opt.value)}
+              style={{
+                padding: '10px 24px',
+                borderRadius: '30px',
+                border: '2px solid',
+                borderColor: canopyFilter === opt.value ? '#111f5a' : '#d1d9f0',
+                backgroundColor: canopyFilter === opt.value ? '#111f5a' : '#ffffff',
+                color: canopyFilter === opt.value ? '#ffffff' : '#111f5a',
+                fontWeight: 600,
+                fontSize: '0.95rem',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                boxShadow: canopyFilter === opt.value ? '0 4px 14px rgba(17,31,90,0.25)' : 'none',
+              }}
+            >
+              {opt.label}
+            </button>
           ))}
-        </Row>
+        </div>
+
+        {/* ── Product Sections ── */}
+        {SECTIONS.map(section => {
+          const items = applyCanopyFilter(products.filter(section.filter));
+          if (items.length === 0) return null;
+          return (
+            <div key={section.id} className="mb-5 pb-3">
+              <h3
+                className="mb-4 fw-bold"
+                style={{
+                  color: '#111f5a',
+                  borderBottom: '3px solid #40c4ff',
+                  paddingBottom: '0.5rem',
+                  display: 'inline-block',
+                }}
+              >
+                {section.title}
+              </h3>
+              <Row className="g-4 g-lg-5">
+                {items.map((product, index) => {
+                  const status = getCanopyStatus(product);
+                  const badgeMap = {
+                    with:    { label: 'With Canopy',            bg: '#e8f4fd', color: '#0d6efd' },
+                    without: { label: 'No Canopy',              bg: '#fff8e1', color: '#ff8f00' },
+                    both:    { label: 'With & Without Canopy',  bg: '#e8fdf0', color: '#198754' },
+                  };
+                  const badge = badgeMap[status];
+                  return (
+                    <Col md={6} lg={4} xl={3} key={index}>
+                      <Card className="h-100 border-0 shadow-sm overflow-hidden hover-lift">
+                        <Card.Img
+                          variant="top"
+                          src={product.image}
+                          alt={product.title}
+                          style={{
+                            height: '260px',
+                            objectFit: 'contain',
+                            padding: '1rem',
+                            backgroundColor: '#f4f8fc',
+                          }}
+                        />
+                        <Card.Body className="text-center p-4 d-flex flex-column">
+                          {badge && (
+                            <span
+                              className="d-inline-block mb-2 mx-auto"
+                              style={{
+                                padding: '3px 12px',
+                                borderRadius: '20px',
+                                fontSize: '0.75rem',
+                                fontWeight: 700,
+                                backgroundColor: badge.bg,
+                                color: badge.color,
+                              }}
+                            >
+                              {badge.label}
+                            </span>
+                          )}
+                          <Card.Title className="mt-2 fw-bold" style={{ fontSize: '1.1rem' }}>
+                            {product.title}
+                          </Card.Title>
+                          <Card.Text className="text-muted small flex-grow-1 mt-2">
+                            {product.shortDesc}
+                          </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="bg-white border-0 text-center pb-4">
+                          <Button
+                            variant="primary"
+                            style={{
+                              backgroundColor: '#111f5a',
+                              borderColor: '#111f5a',
+                              borderRadius: '20px',
+                            }}
+                            size="sm"
+                            className="px-4"
+                            onClick={() => handleShow(product)}
+                          >
+                            View Details
+                          </Button>
+                        </Card.Footer>
+                      </Card>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </div>
+          );
+        })}
 
         {/* <div className="text-center mt-5 pt-4">
           <Button variant="primary" size="lg" className="px-5 py-3">
