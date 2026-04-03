@@ -8,6 +8,7 @@ import {
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import PageLoader from './components/PageLoader';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
@@ -27,6 +28,7 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
+      <PageLoader />
       <div
         className="d-flex flex-column min-vh-100"
         style={{ backgroundColor: 'var(--bg-light)' }}
@@ -39,7 +41,6 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        {/* </main> */}
         <Footer className="mt-auto" />
         <WhatsAppButton />
       </div>
