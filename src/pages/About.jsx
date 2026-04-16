@@ -24,9 +24,7 @@ function About() {
             <p className="text-uppercase fw-semibold mb-2" style={{ color: '#40c4ff', letterSpacing: '2px', fontSize: '0.85rem' }}>
               Established 1960
             </p>
-            <h1 className="snowflake-accent mb-3" style={{ fontSize: '2rem' }}>
-              Who We Are
-            </h1>
+
             <p className="lead text-muted mb-4" style={{ fontSize: '1.05rem', fontStyle: 'italic' }}>
               Our trusted associate has decades of proven excellence in Electrical appliances and refrigeration.
             </p>
