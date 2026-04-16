@@ -384,16 +384,6 @@ const products = [
   },
 ];
 
-// Helper: determine canopy status from features
-const getCanopyStatus = product => {
-  const feats = product.features || [];
-  const hasBoth = feats.some(f => f.toLowerCase().includes('and without'));
-  const hasCanopy = feats.some(f => f.toLowerCase() === 'canopy');
-  if (hasBoth) return 'both';
-  if (hasCanopy) return 'with';
-  return 'without';
-};
-
 const SECTIONS = [
   {
     id: 'single',
@@ -417,17 +407,11 @@ const SECTIONS = [
   },
 ];
 
-const CANOPY_OPTIONS = [
-  { value: 'all', label: 'All Models' },
-  { value: 'with', label: 'With Canopy' },
-  { value: 'without', label: 'Without Canopy' },
-  { value: 'both', label: 'With & Without Canopy' },
-];
+
 
 function Products() {
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [canopyFilter, setCanopyFilter] = useState('all');
 
   const handleShow = product => {
     setSelectedProduct(product);
@@ -436,8 +420,6 @@ function Products() {
 
   const handleClose = () => setShowModal(false);
 
-  const applyCanopyFilter = items =>
-    canopyFilter === 'all' ? items : items.filter(p => getCanopyStatus(p) === canopyFilter);
 
   return (
     <div
@@ -457,34 +439,11 @@ function Products() {
           </p>
         </div>
 
-        {/* ── Canopy Filter Buttons ── */}
-        <div className="d-flex flex-wrap justify-content-center gap-2 mb-5">
-          {CANOPY_OPTIONS.map(opt => (
-            <button
-              key={opt.value}
-              onClick={() => setCanopyFilter(opt.value)}
-              style={{
-                padding: '10px 24px',
-                borderRadius: '30px',
-                border: '2px solid',
-                borderColor: canopyFilter === opt.value ? '#111f5a' : '#d1d9f0',
-                backgroundColor: canopyFilter === opt.value ? '#111f5a' : '#ffffff',
-                color: canopyFilter === opt.value ? '#ffffff' : '#111f5a',
-                fontWeight: 600,
-                fontSize: '0.95rem',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                boxShadow: canopyFilter === opt.value ? '0 4px 14px rgba(17,31,90,0.25)' : 'none',
-              }}
-            >
-              {opt.label}
-            </button>
-          ))}
-        </div>
+
 
         {/* ── Product Sections ── */}
         {SECTIONS.map(section => {
-          const items = applyCanopyFilter(products.filter(section.filter));
+          const items = products.filter(section.filter);
           if (items.length === 0) return null;
           return (
             <div key={section.id} className="mb-5 pb-3">
@@ -501,13 +460,6 @@ function Products() {
               </h3>
               <Row className="g-4 g-lg-5">
                 {items.map((product, index) => {
-                  const status = getCanopyStatus(product);
-                  const badgeMap = {
-                    with:    { label: 'With Canopy',            bg: '#e8f4fd', color: '#0d6efd' },
-                    without: { label: 'No Canopy',              bg: '#fff8e1', color: '#ff8f00' },
-                    both:    { label: 'With & Without Canopy',  bg: '#e8fdf0', color: '#198754' },
-                  };
-                  const badge = badgeMap[status];
                   return (
                     <Col md={6} lg={4} xl={3} key={index}>
                       <Card className="h-100 border-0 shadow-sm overflow-hidden hover-lift">
@@ -523,21 +475,6 @@ function Products() {
                           }}
                         />
                         <Card.Body className="text-center p-4 d-flex flex-column">
-                          {badge && (
-                            <span
-                              className="d-inline-block mb-2 mx-auto"
-                              style={{
-                                padding: '3px 12px',
-                                borderRadius: '20px',
-                                fontSize: '0.75rem',
-                                fontWeight: 700,
-                                backgroundColor: badge.bg,
-                                color: badge.color,
-                              }}
-                            >
-                              {badge.label}
-                            </span>
-                          )}
                           <Card.Title className="mt-2 fw-bold" style={{ fontSize: '1.1rem' }}>
                             {product.title}
                           </Card.Title>

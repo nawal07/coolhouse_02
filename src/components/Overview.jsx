@@ -24,22 +24,23 @@ function Overview() {
           <Row className="align-items-center g-5">
             <Col lg={6}>
               <h3 className="fw-bold mb-4">
-                Your Partner in Cooling and Comfort.{' '}
+                Your Partner in Cooling and Comfort.
               </h3>
               <p className="lead" style={{ fontSize: '1rem' }}>
-                Cool house Trading is the trusted and authorized distributor of{' '}
-                <span className="fw-bold">General Deluxe</span> commercial
-                refrigeration solutions in the Middle East with a strong focus
-                on Saudi Arabia.{' '}
+                Cool House Trading is the official trading partner and authorized distributor of{' '}
+                <span className="fw-bold">General Deluxe (M. Abu Haltam Group for Investment)</span>,
+                a leading Jordanian manufacturer of premium refrigeration solutions. We bring both{' '}
+                <strong>commercial refrigeration equipment</strong> and{' '}
+                <strong>home appliances</strong> to the Middle East market with unmatched quality
+                and reliability, with a strong focus on Saudi Arabia.
               </p>
               <p className="mb-4">
-                With a legacy dating back to 1960, the company has evolved from
-                a premium appliance importer into a fully integrated
-                manufacturing operation with an annual production capacity of
-                300,000 units. Today, Cool House stands as a trusted partner for
-                retail, food service, healthcare, and beverage sectors,
-                delivering high-performance refrigeration systems designed for
-                reliability, efficiency, and long-term operational value.
+                <strong>General Deluxe</strong> is one of the leading manufacturers in the Middle East,
+                producing household and commercial electrical appliances in Jordan such as refrigerators,
+                freezers, washing machines, A/C units, and upright freezers and fridges. General Deluxe's
+                network has been expanded to cover Middle East, European, and African markets. Currently,
+                we are exporting to countries like Saudi Arabia, Iraq, Egypt, Syria, Lebanon, Ghana,
+                Tunisia, Algeria, Central Africa, and Cyprus.
               </p>
               <Button variant="primary" as={Link} to="/about">
                 Discover More

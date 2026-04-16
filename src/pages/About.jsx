@@ -14,42 +14,47 @@ function About() {
   return (
     <div
       className="section d-flex flex-column justify-content-center p-0"
-      style={{ backgroundColor: 'var(--bg-light)' }}
+      style={{ backgroundColor: 'var(--bg-light)', overflowX: 'clip' }}
     >
       <PageHero title="About Us" backgroundImage="/hero.jpg" />
 
       <Container fluid className="p-0 mt-5">
         <Row className="align-items-center mb-5 g-4 px-4 px-md-5 ">
           <Col lg={6}>
-            <h1 className="snowflake-accent mb-4" style={{ fontSize: '2rem' }}>
-              Authorized Distributor of General Deluxe
+            <p className="text-uppercase fw-semibold mb-2" style={{ color: '#40c4ff', letterSpacing: '2px', fontSize: '0.85rem' }}>
+              Established 1960
+            </p>
+            <h1 className="snowflake-accent mb-3" style={{ fontSize: '2rem' }}>
+              Who We Are
             </h1>
-            <p className="lead text-muted mb-4" style={{ fontSize: '1.1rem' }}>
-              Cool House Trading is the official trading partner and authorized
-              distributor of
-              <strong> General Deluxe</strong>, a leading Jordanian manufacturer
-              of premium refrigeration solutions. We bring both{' '}
-              <strong>commercial refrigeration equipment</strong> and
-              <strong> home appliances</strong> to the Middle East market with
-              unmatched quality and reliability, with a strong focus on Saudi Arabia.
+            <p className="lead text-muted mb-4" style={{ fontSize: '1.05rem', fontStyle: 'italic' }}>
+              Our trusted associate has decades of proven excellence in Electrical appliances and refrigeration.
             </p>
 
             <p className="mb-4">
-              With a legacy dating back to 1960, the company has evolved from a
-              premium appliance importer into a fully integrated manufacturing
-              operation with an annual production capacity of 300,000 units.
-              Today, Cool House stands as a trusted partner for retail, food
-              service, healthcare, and beverage sectors, delivering
-              high-performance refrigeration systems designed for reliability,
-              efficiency, and long-term operational value.
+              Cool House Trading is the official trading partner and authorized distributor of{' '}
+              <strong>General Deluxe (M. Abu Haltam Group for Investment)</strong>, a leading Jordanian
+              manufacturer of premium refrigeration solutions. We bring both{' '}
+              <strong>commercial refrigeration equipment</strong> and{' '}
+              <strong>home appliances</strong> to the Middle East market with unmatched quality and
+              reliability, with a strong focus on Saudi Arabia.
             </p>
+
             <p className="mb-4">
-              We are proud to be affiliated with the Jordan-based manufacturer
-              behind General Deluxe, a globally respected name in high-quality
-              upright fridges, freezers, and commercial cooling equipment. With
-              decades of expertise from our manufacturing partner, we bring
-              certified, energy-efficient, and durable products to supermarkets,
-              hotels, restaurants, and beverage sectors across the region.
+              <strong>General Deluxe</strong> is one of the leading manufacturers in the Middle East,
+              producing household and commercial electrical appliances in Jordan such as refrigerators,
+              freezers, washing machines, A/C units, and upright freezers and fridges. General Deluxe's
+              network has been expanded to cover Middle East, European, and African markets. Currently,
+              we are exporting General Deluxe domestic and commercial products to countries like Saudi
+              Arabia, Iraq, Egypt, Syria, Lebanon, Ghana, Tunisia, Algeria, Central Africa, and Cyprus.
+            </p>
+
+            <p className="mb-4">
+              We are proud to be affiliated with the Jordan-based manufacturer behind General Deluxe,
+              a globally respected name in high-quality upright fridges, freezers, and commercial cooling
+              equipment. With decades of expertise from our manufacturing partner, we bring certified,
+              energy-efficient, and durable products to food and non-food industries and sectors across
+              the kingdom.
             </p>
 
             <Button

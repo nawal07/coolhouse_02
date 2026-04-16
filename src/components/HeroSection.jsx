@@ -91,7 +91,7 @@ function HeroSection() {
                 style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'rgba(0, 0, 0, 0.55)',
+                  background: 'rgba(0, 0, 0, 0.40)',
                   zIndex: 1,
                 }}
               />

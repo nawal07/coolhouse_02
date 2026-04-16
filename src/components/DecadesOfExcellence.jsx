@@ -157,7 +157,7 @@ function DecadesOfExcellence() {
               <Col xs={12} sm={6} md={4} lg={3}>
                 <div className="counter-item p-4">
                   <h3 className="fw-bold display-5 mb-1">
-                    {countersStarted ? <CountUp end={6} duration={3} /> : '0'}+
+                    {countersStarted ? <CountUp end={10} duration={3} /> : '0'}+
                   </h3>
                   <p className="text-muted fw-medium fs-5">EXPORT MARKETS</p>
                 </div>
