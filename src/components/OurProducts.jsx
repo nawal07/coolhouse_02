@@ -29,7 +29,7 @@ function OurProducts() {
                 }}
               />
               <Card.Body className="text-center p-4">
-                <h5 className="fw-bold mt-3">Double Door GVC 1100</h5>
+                <h5 className="fw-bold mt-3">Double Door GVC 1106</h5>
                 {/* <p className="text-muted small">1100 liters</p> */}
               </Card.Body>
             </Card>
@@ -48,7 +48,7 @@ function OurProducts() {
                 }}
               />
               <Card.Body className="text-center p-4">
-                <h5 className="fw-bold mt-3">Single Door GVC 640</h5>
+                <h5 className="fw-bold mt-3">Single Door GVC 646</h5>
                 {/* <p className="text-muted small">530 liters</p> */}
               </Card.Body>
             </Card>

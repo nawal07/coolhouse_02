@@ -30,7 +30,7 @@ function Navbar() {
         <img
           src="/Logo_no_bg.png"
           alt="Cool House Trading"
-          style={{ height: '50px' }}
+          style={{ height: '70px' }}
         />
       </BSNavbar.Brand>
 

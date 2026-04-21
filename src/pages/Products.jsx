@@ -19,7 +19,7 @@ const products = [
     specs: {
       'Capacity (Liters)': '320',
       'Climate Class': '5',
-      'External Dimensions (W*D*H) cm': '60*58*200',
+      'External Dimensions (W*D*H) cm': '60*58*186',
       'Gross weight (kg)': '63',
       '40HQ container loading': '75',
       'Truck loading (L*W*H) (13.5*2.48*3)m': '81',
@@ -49,7 +49,7 @@ const products = [
     specs: {
       'Capacity (Liters)': '435',
       'Climate Class': '5',
-      'External Dimensions (W*D*H) cm': '66*68*214',
+      'External Dimensions (W*D*H) cm': '66*68*210',
       'Gross weight (kg)': '78',
       '40HQ container loading': '54',
       'Truck loading (L*W*H) (13.5*2.48*3)m': '60',
@@ -78,8 +78,8 @@ const products = [
     specs: {
       'Capacity (Liters)': '532',
       'Climate Class': '5',
-      'External Dimensions (W*D*H) cm': '80*68*230',
-      'Gross weight (kg)': '92',
+      'External Dimensions (W*D*H) cm': '80*68*210',
+      'Gross weight (kg)': '96',
       '40HQ container loading': '40',
       'Truck loading (L*W*H) (13.5*2.48*3)m': '45',
     },
@@ -102,7 +102,7 @@ const products = [
   },
 
   {
-    title: 'GVC 646 Upright Freezer (SLIM)',
+    title: 'GVC 646 Up-right Showcase Refrigerator (Single Door)',
     shortDesc: '532 Liters | Black or White',
     image: 'gvc_646.png',
     specs: {
@@ -120,11 +120,11 @@ const products = [
 
   {
     title: 'GVC 1100 Refrigerator (Swing Doors)',
-    shortDesc: '1060 Liters | Black or White',
+    shortDesc: '1060 Liters | White',
     image: 'gvc_1100.png',
     specs: {
       'Capacity (Liters)': '1060',
-      'External Dimensions (W*D*H) cm': '120*728*200',
+      'External Dimensions (W*D*H) cm': '120*72*200',
     },
     features: [
       'Canopy and Without canopy',
@@ -135,7 +135,23 @@ const products = [
       'Wide steel condenser with cooling fan',
     ],
   },
-
+  {
+    title: 'GVC 1101 Up-right Refrigerator (Swing Doors)',
+    shortDesc: '1060 Liters | Black',
+    image: 'gvc_1101.png',
+    specs: {
+      'Capacity (Liters)': '1060',
+      'External Dimensions (W*D*H) cm': '120*72*200',
+    },
+    features: [
+      'Canopy and Without canopy',
+      'Vertical Bottle cooler ',
+      'Dynamic cooling (no-frost)',
+      'Double tempered glass door ',
+      'Double swing doors',
+      'Wide steel condenser with cooling fan',
+    ],
+  },
   {
     title: 'GVC 1106 Up-right Showcase Refrigerator (Double Swing Door)',
     shortDesc:
@@ -166,98 +182,98 @@ const products = [
       'Digital Thermometer',
     ],
   },
+  // {
+  //   title: 'GVC 1200 Up-right Showcase Refrigerator (Double Sliding Door)',
+  //   shortDesc:
+  //     '1023 Liters | Climate Class 5 | Double Sliding Doors | Large Display Area | R290',
+  //   image: 'gvc_1200.png',
+  //   specs: {
+  //     'Capacity (Liters)': '1023',
+  //     'Climate Class': '5',
+  //     'External Dimensions (W*D*H) cm': '122*65*202',
+  //     'Gross weight (kg)': '138',
+  //     '40HQ container loading': '27',
+  //     'Truck loading (L*W*H) (13.5*2.48*3)m': '30',
+  //   },
+  //   features: [
+  //     'Canopy',
+  //     'Dynamic cooling (no-frost)',
+  //     'White pre-painted steel inner liner',
+  //     '8 adjustable shelves',
+  //     'Double sliding tempered glass doors with Low E-film',
+  //     'LED Lights (two sides)',
+  //     'Door Lock and self closing',
+  //     'Six wheels',
+  //     'Adjustable feet in the front',
+  //     'Wide steel condenser with cooling fan',
+  //     'CFC free environmentally friendly',
+  //     'Gas charge : R290',
+  //     '220-240 V / 50Hz/60Hz',
+  //     'Digital Thermometer',
+  //   ],
+  // },
+  // {
+  //   title: 'GVC 1350 Up-right Showcase Refrigerator (Double Sliding Door)',
+  //   shortDesc:
+  //     '1147 Liters | Climate Class 5 | Large Capacity | Sliding Doors | R290',
+  //   image: 'gvc_1350.png',
+  //   specs: {
+  //     'Capacity (Liters)': '1147',
+  //     'Climate Class': '5',
+  //     'External Dimensions (W*D*H) cm': '135*65*202',
+  //     'Gross weight (kg)': '152',
+  //     '40HQ container loading': '24',
+  //     'Truck loading (L*W*H) (13.5*2.48*3)m': '26',
+  //   },
+  //   features: [
+  //     'Canopy',
+  //     'Dynamic cooling (no-frost)',
+  //     'White pre-painted steel inner liner',
+  //     '10 adjustable shelves',
+  //     'Double sliding tempered glass doors with Low E-film',
+  //     'LED Lights (two sides)',
+  //     'Door Lock and self closing',
+  //     'Six wheels',
+  //     'Adjustable feet in the front',
+  //     'Wide steel condenser with cooling fan',
+  //     'CFC free environmentally friendly',
+  //     'Gas charge : R290',
+  //     '220-240 V / 50Hz/60Hz',
+  //     'Digital Thermometer',
+  //   ],
+  // },
+  // {
+  //   title: 'GVC 1950 Up-right Showcase Refrigerator (3 Swing Doors)',
+  //   shortDesc:
+  //     '1793 Liters | Climate Class 5 | Triple Swing Doors | Maximum Display | R290',
+  //   image: 'gvc_1950.png',
+  //   specs: {
+  //     'Capacity (Liters)': '1793',
+  //     'Climate Class': '5',
+  //     'External Dimensions (W*D*H) cm': '206*65*202',
+  //     'Gross weight (kg)': '210',
+  //     '40HQ container loading': '16',
+  //     'Truck loading (L*W*H) (13.5*2.48*3)m': '18',
+  //   },
+  //   features: [
+  //     'Canopy',
+  //     'Dynamic cooling (no-frost)',
+  //     'White pre-painted steel inner liner',
+  //     '12 adjustable shelves',
+  //     'Triple tempered glass swing doors with Low E-film',
+  //     'LED Lights (two sides)',
+  //     'Door Lock and self closing',
+  //     'Eight wheels',
+  //     'Adjustable feet in the front',
+  //     'Wide steel condenser with cooling fan',
+  //     'CFC free environmentally friendly',
+  //     'Gas charge : R290',
+  //     '220-240 V / 50Hz/60Hz',
+  //     'Digital Thermometer',
+  //   ],
+  // },
   {
-    title: 'GVC 1200 Up-right Showcase Refrigerator (Double Sliding Door)',
-    shortDesc:
-      '1023 Liters | Climate Class 5 | Double Sliding Doors | Large Display Area | R290',
-    image: 'gvc_1200.png',
-    specs: {
-      'Capacity (Liters)': '1023',
-      'Climate Class': '5',
-      'External Dimensions (W*D*H) cm': '122*65*202',
-      'Gross weight (kg)': '138',
-      '40HQ container loading': '27',
-      'Truck loading (L*W*H) (13.5*2.48*3)m': '30',
-    },
-    features: [
-      'Canopy',
-      'Dynamic cooling (no-frost)',
-      'White pre-painted steel inner liner',
-      '8 adjustable shelves',
-      'Double sliding tempered glass doors with Low E-film',
-      'LED Lights (two sides)',
-      'Door Lock and self closing',
-      'Six wheels',
-      'Adjustable feet in the front',
-      'Wide steel condenser with cooling fan',
-      'CFC free environmentally friendly',
-      'Gas charge : R290',
-      '220-240 V / 50Hz/60Hz',
-      'Digital Thermometer',
-    ],
-  },
-  {
-    title: 'GVC 1350 Up-right Showcase Refrigerator (Double Sliding Door)',
-    shortDesc:
-      '1147 Liters | Climate Class 5 | Large Capacity | Sliding Doors | R290',
-    image: 'gvc_1350.png',
-    specs: {
-      'Capacity (Liters)': '1147',
-      'Climate Class': '5',
-      'External Dimensions (W*D*H) cm': '135*65*202',
-      'Gross weight (kg)': '152',
-      '40HQ container loading': '24',
-      'Truck loading (L*W*H) (13.5*2.48*3)m': '26',
-    },
-    features: [
-      'Canopy',
-      'Dynamic cooling (no-frost)',
-      'White pre-painted steel inner liner',
-      '10 adjustable shelves',
-      'Double sliding tempered glass doors with Low E-film',
-      'LED Lights (two sides)',
-      'Door Lock and self closing',
-      'Six wheels',
-      'Adjustable feet in the front',
-      'Wide steel condenser with cooling fan',
-      'CFC free environmentally friendly',
-      'Gas charge : R290',
-      '220-240 V / 50Hz/60Hz',
-      'Digital Thermometer',
-    ],
-  },
-  {
-    title: 'GVC 1950 Up-right Showcase Refrigerator (3 Swing Doors)',
-    shortDesc:
-      '1793 Liters | Climate Class 5 | Triple Swing Doors | Maximum Display | R290',
-    image: 'gvc_1950.png',
-    specs: {
-      'Capacity (Liters)': '1793',
-      'Climate Class': '5',
-      'External Dimensions (W*D*H) cm': '206*65*202',
-      'Gross weight (kg)': '210',
-      '40HQ container loading': '16',
-      'Truck loading (L*W*H) (13.5*2.48*3)m': '18',
-    },
-    features: [
-      'Canopy',
-      'Dynamic cooling (no-frost)',
-      'White pre-painted steel inner liner',
-      '12 adjustable shelves',
-      'Triple tempered glass swing doors with Low E-film',
-      'LED Lights (two sides)',
-      'Door Lock and self closing',
-      'Eight wheels',
-      'Adjustable feet in the front',
-      'Wide steel condenser with cooling fan',
-      'CFC free environmentally friendly',
-      'Gas charge : R290',
-      '220-240 V / 50Hz/60Hz',
-      'Digital Thermometer',
-    ],
-  },
-  {
-    title: 'GVF 565 Upright Freezer (Single Door)',
+    title: 'GVF 565 Upright Freezer',
     shortDesc:
       '465 Liters | Climate Class T | Tropical Class | Triple Tempered Glass | R290',
     image: 'gvf_565.png',
@@ -388,12 +404,11 @@ const SECTIONS = [
   {
     id: 'single',
     title: 'Single Door Models',
-    filter: p =>
-      p.title.includes('Single Door') || p.title.includes('SLIM') || p.title.includes('GVF'),
+    filter: p => p.title.includes('Single Door') || p.title.includes('SLIM'),
   },
   {
     id: 'double',
-    title: 'Double & Multi-Door Models',
+    title: 'Double Door Models',
     filter: p =>
       p.title.includes('Double') ||
       p.title.includes('Swing Door') ||
@@ -402,12 +417,10 @@ const SECTIONS = [
   },
   {
     id: 'chest',
-    title: 'Chest Freezers',
-    filter: p => p.title.includes('Chest Freezer'),
+    title: 'Freezers',
+    filter: p => p.title.includes('Freezer'),
   },
 ];
-
-
 
 function Products() {
   const [showModal, setShowModal] = useState(false);
@@ -419,7 +432,6 @@ function Products() {
   };
 
   const handleClose = () => setShowModal(false);
-
 
   return (
     <div
@@ -438,8 +450,6 @@ function Products() {
             door refrigerators.
           </p>
         </div>
-
-
 
         {/* ── Product Sections ── */}
         {SECTIONS.map(section => {
@@ -475,7 +485,10 @@ function Products() {
                           }}
                         />
                         <Card.Body className="text-center p-4 d-flex flex-column">
-                          <Card.Title className="mt-2 fw-bold" style={{ fontSize: '1.1rem' }}>
+                          <Card.Title
+                            className="mt-2 fw-bold"
+                            style={{ fontSize: '1.1rem' }}
+                          >
                             {product.title}
                           </Card.Title>
                           <Card.Text className="text-muted small flex-grow-1 mt-2">
