@@ -25,6 +25,11 @@ function About() {
               Established 1960
             </p>
 
+            <h2 className="fw-bold mb-3" style={{ color: '#111f5a', fontSize: '2rem', lineHeight: '1.2' }}>
+              General Deluxe –{' '}
+              <span style={{ color: '#40c4ff' }}>Proven Track Records</span>
+            </h2>
+
             <p className="lead text-muted mb-4" style={{ fontSize: '1.05rem', fontStyle: 'italic' }}>
               Our trusted associate has decades of proven excellence in Electrical appliances and refrigeration.
             </p>

@@ -7,6 +7,12 @@ function TrustBar() {
   return (
     <section className="trust-bar py-5 bg-white border-top border-bottom">
       <Container>
+        {/* Section Heading */}
+        <div className="text-center mb-4">
+          <h2 className="fw-bold mb-0" style={{ fontSize: '1.8rem' }}>
+            General Deluxe - Proven Track Records
+          </h2>
+        </div>
         <Row className="g-4 text-center justify-content-center">
           {/* Established 1960 */}
           <Col xs={6} md={3}>
