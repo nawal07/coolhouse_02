@@ -90,28 +90,28 @@ function Footer() {
             <p className="d-flex align-items-center gap-3">
               <FaPhoneAlt />
               <a
-                href="tel:+966114781100"
-                className="text-decoration-none text-white  text-reset"
+                href="tel:+966540008457"
+                className="text-decoration-none text-white  text-primary"
               >
-                +966 11 478 1100
+                +966 54 000 8457
               </a>
             </p>
             <p className="d-flex align-items-center gap-3">
               <FaWhatsapp />
               <a
-                href={`https://wa.me/966598986363?text=${encodeURIComponent("Hello! I'm contacting you from your website.")}`}
+                href={`https://wa.me/966540008457?text=${encodeURIComponent("Hello! I'm contacting you from your website.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-decoration-none text-white hover-text-primary"
               >
-                +966 59 898 6363
+                +966 54 000 8457
               </a>
             </p>
 
             <p className="d-flex align-items-center gap-3">
               <FaEnvelope />
               <a
-                href="mailto:info@coolhousetrading.com?subject=Inquiry%20from%20Cool%20House%20Website&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+                href="mailto:info@coolhousetrading.com?subject=Inquiry%20from%20Coolhouse%20Website&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
                 className="text-decoration-none text-white hover-text-primary"
               >
                 info@coolhousetrading.com

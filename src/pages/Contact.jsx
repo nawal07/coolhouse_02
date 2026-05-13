@@ -76,7 +76,7 @@ function Contact() {
                 custom solutions.
               </p>
               <p>
-                <strong>Phone:</strong> +968 1234 5678
+                <strong>Phone:</strong> +966 54 000 8457
               </p>
               <p>
                 <strong>Email:</strong> info@coolhousetrading.com

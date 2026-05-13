@@ -613,7 +613,7 @@ function Products() {
                 onClick={() => {
                   const msg = `Interested in: ${selectedProduct.title}\n\nPlease send full details, pricing & availability.`;
                   window.open(
-                    `https://wa.me/966598986363?text=${encodeURIComponent(msg)}`,
+                    `https://wa.me/966540008457?text=${encodeURIComponent(msg)}`,
                     '_blank'
                   );
                 }}
