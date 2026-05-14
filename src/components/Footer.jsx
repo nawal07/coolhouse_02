@@ -1,4 +1,5 @@
 import React from 'react';
+import { LOGO_3_NO_BG } from '../constants/images';
 import { Link } from 'react-router-dom';
 import {
   FaFacebookF,
@@ -20,7 +21,7 @@ function Footer() {
       <div className="container">
         <div className="row border-bottom pb-2">
           <div className="col-md-3">
-            <img className="" src="Logo_3_no_bg.png" alt="Cool House" />
+            <img className="" src={LOGO_3_NO_BG} alt="Cool House" />
             <p className="mt-3">
               Premium commercial refrigeration solutions for modern businesses.
             </p>

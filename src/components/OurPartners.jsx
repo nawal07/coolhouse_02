@@ -1,4 +1,5 @@
 import React from 'react';
+import { PARTNER_LOGOS } from '../constants/images';
 
 function OurPartners() {
   return (
@@ -30,7 +31,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/pepsi.png"
+                  src={PARTNER_LOGOS.pepsi}
                   alt="Pepsi"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -48,7 +49,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/cocacola.png"
+                  src={PARTNER_LOGOS.cocacola}
                   alt="Coca-Cola"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -66,7 +67,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/almarai.png"
+                  src={PARTNER_LOGOS.almarai}
                   alt="Almarai"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -84,7 +85,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/saudia.png"
+                  src={PARTNER_LOGOS.saudia}
                   alt="Saudia"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -102,7 +103,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/americana.png"
+                  src={PARTNER_LOGOS.americana}
                   alt="Americana"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -120,7 +121,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/nadec.png"
+                  src={PARTNER_LOGOS.nadec}
                   alt="Nadec"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -138,7 +139,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/tanmiah.png"
+                  src={PARTNER_LOGOS.tanmiah}
                   alt="Tanmiah"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -156,7 +157,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/magnum.png"
+                  src={PARTNER_LOGOS.magnum}
                   alt="Magnum"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -174,7 +175,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/kinza.png"
+                  src={PARTNER_LOGOS.kinza}
                   alt="Kinza"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -192,7 +193,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/logo_3.png"
+                  src={PARTNER_LOGOS.logo_3}
                   alt="Kawader"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -210,7 +211,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/logo_4.png"
+                  src={PARTNER_LOGOS.logo_4}
                   alt="Sheta & Saif"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -228,7 +229,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/logo_5.png"
+                  src={PARTNER_LOGOS.logo_5}
                   alt="Logo 5"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -246,7 +247,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/logo_6.png"
+                  src={PARTNER_LOGOS.logo_6}
                   alt="Al Halees"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}
@@ -264,7 +265,7 @@ function OurPartners() {
                 }}
               >
                 <img
-                  src="/logos/logo_2.png"
+                  src={PARTNER_LOGOS.logo_2}
                   alt="Masnaa"
                   className="img-fluid"
                   style={{ maxHeight: ' 60px' }}

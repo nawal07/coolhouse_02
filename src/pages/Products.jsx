@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HERO, PRODUCTS } from '../constants/images';
 import PageHero from '../components/Hero';
 import {
   Container,
@@ -15,7 +16,7 @@ const products = [
     title: 'GVC 406 Up-right Showcase Refrigerator (Single Door)',
     shortDesc:
       '320 Liters | Climate Class 5 | Dynamic cooling (No-Frost) | R290',
-    image: 'gvc_406.png',
+    image: PRODUCTS.gvc_406,
     specs: {
       'Capacity (Liters)': '320',
       'Climate Class': '5',
@@ -45,7 +46,7 @@ const products = [
     title: 'GVC 526 Up-right Showcase Refrigerator (Single Door)',
     shortDesc:
       '435 Liters | Climate Class 5 | LED Lighting | Self Closing Door | R290',
-    image: 'gvc_526.png',
+    image: PRODUCTS.gvc_526,
     specs: {
       'Capacity (Liters)': '435',
       'Climate Class': '5',
@@ -74,7 +75,7 @@ const products = [
   {
     title: 'GVC 636 Up-right Showcase Refrigerator (Single Door)',
     shortDesc: '532 Liters | Climate Class 5 | Heavy Duty | LED Lights | R290',
-    image: 'gvc_636.png',
+    image: PRODUCTS.gvc_636,
     specs: {
       'Capacity (Liters)': '532',
       'Climate Class': '5',
@@ -104,7 +105,7 @@ const products = [
   {
     title: 'GVC 646 Up-right Showcase Refrigerator (Single Door)',
     shortDesc: '532 Liters | Black or White',
-    image: 'gvc_646.png',
+    image: PRODUCTS.gvc_646,
     specs: {
       'Capacity (Liters)': '532',
       'External Dimensions (W*D*H) cm': '80*68*200',
@@ -121,7 +122,7 @@ const products = [
   {
     title: 'GVC 1100 Refrigerator (Swing Doors)',
     shortDesc: '1060 Liters | White',
-    image: 'gvc_1100.png',
+    image: PRODUCTS.gvc_1100,
     specs: {
       'Capacity (Liters)': '1060',
       'External Dimensions (W*D*H) cm': '120*72*200',
@@ -138,7 +139,7 @@ const products = [
   {
     title: 'GVC 1101 Up-right Refrigerator (Swing Doors)',
     shortDesc: '1060 Liters | Black',
-    image: 'gvc_1101.png',
+    image: PRODUCTS.gvc_1101,
     specs: {
       'Capacity (Liters)': '1060',
       'External Dimensions (W*D*H) cm': '120*72*200',
@@ -156,7 +157,7 @@ const products = [
     title: 'GVC 1106 Up-right Showcase Refrigerator (Double Swing Door)',
     shortDesc:
       '1060 Liters | Climate Class 5 | Double Swing Doors | Vertical Bottle Cooler | R290',
-    image: 'gvc_1106.png',
+    image: PRODUCTS.gvc_1106,
     specs: {
       'Capacity (Liters)': '1060',
       'Climate Class': '5',
@@ -276,7 +277,7 @@ const products = [
     title: 'GVF 565 Upright Freezer',
     shortDesc:
       '465 Liters | Climate Class T | Tropical Class | Triple Tempered Glass | R290',
-    image: 'gvf_565.png',
+    image: PRODUCTS.gvf_565,
     specs: {
       'Capacity (Liters)': '465',
       'Climate Class': 'T',
@@ -306,7 +307,7 @@ const products = [
     title: 'GSC 407 Inclined Showcase Chest Freezer',
     shortDesc:
       '376 Liters | Climate Class T | Tempered Glass Door | LED Light | R290',
-    image: 'gsc_407.png',
+    image: PRODUCTS.gsc_407,
     specs: {
       'Capacity (Liters)': '376',
       'Climate Class': 'T',
@@ -330,7 +331,7 @@ const products = [
     title: 'GSC 507 Inclined Showcase Chest Freezer',
     shortDesc:
       '410 Liters | Climate Class T | Tempered Glass | LED Light | R290',
-    image: 'gsc_507.png',
+    image: PRODUCTS.gsc_507,
     specs: {
       'Capacity (Liters)': '410',
       'Climate Class': 'T',
@@ -354,7 +355,7 @@ const products = [
     title: 'GSC 550 Flat Showcase Chest Freezer',
     shortDesc:
       '482 Liters | Climate Class T | Flat Glass Top | 2 Baskets | R290',
-    image: 'gsc_550.png',
+    image: PRODUCTS.gsc_550,
     specs: {
       'Capacity (Liters)': '482',
       'Climate Class': 'T',
@@ -378,7 +379,7 @@ const products = [
     title: 'GSC 650 Flat Showcase Chest Freezer',
     shortDesc:
       '586 Liters | Climate Class T | Flat Glass Top | 2 Baskets | R290',
-    image: 'gsc_650.png',
+    image: PRODUCTS.gsc_650,
     specs: {
       'Capacity (Liters)': '586',
       'Climate Class': 'T',
@@ -438,7 +439,7 @@ function Products() {
       className="section py-5"
       style={{ backgroundColor: 'var(--bg-light)' }}
     >
-      <PageHero title="Products" backgroundImage="/hero.jpg" />
+      <PageHero title="Products" backgroundImage={HERO} />
       <Container fluid className="px-4 px-md-5 mt-4">
         <div className="text-center my-5">
           <h2 className="snowflake-accent display-6 fw-bold">

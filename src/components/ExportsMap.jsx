@@ -1,4 +1,5 @@
 import React from 'react';
+import { EXPORTS_MAP } from '../constants/images';
 import { Container, Row, Col } from 'react-bootstrap';
 import {
   LB, // Lebanon
@@ -37,7 +38,7 @@ function ExportsMap() {
           <Col lg={7} className="text-center">
             <div className="position-relative overflow-hidden ">
               <img
-                src="exports_map.png"
+                src={EXPORTS_MAP}
                 alt="Cool House Export Markets Map"
                 className="img-fluid w-100"
                 style={{ minHeight: '400px', objectFit: 'cover' }}

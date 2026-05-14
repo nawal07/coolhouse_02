@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { HERO_1, HERO_2, HERO_3, HERO_4 } from '../constants/images';
 import { Carousel, Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const slides = [
   {
-    image: '/hero_1.png',
+    image: HERO_1,
     title: 'General Deluxe Upright Fridges & Freezers.',
     desc: 'Premium commercial refrigeration solutions for modern businesses — distributed by Cool House Trading.',
   },
   {
-    image: '/hero_2.png',
+    image: HERO_2,
     title: 'The Future of Cooling Solutions.',
     desc: 'Leading the Future of Commercial Refrigeration & Home Appliances in the Middle East.',
   },
   {
-    image: '/hero_3.png',
+    image: HERO_3,
     title: 'Your Partner in Cooling and Comfort.',
     desc: 'Trusted Commercial Refrigeration Solutions for Modern Businesses & Home Comfort Across the Region',
   },
   {
-    image: '/hero_4.png',
+    image: HERO_4,
     title: 'Your Partner in Cooling and Comfort.',
     desc: 'Trusted Commercial Refrigeration Solutions for Modern Businesses & Home Comfort Across the Region',
   },

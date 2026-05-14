@@ -1,4 +1,5 @@
 import React from 'react';
+import { DOUBLE_DOOR_IMG, SINGLE_DOOR_IMG, UPRIGHT_FREEZER_IMG } from '../constants/images';
 import { Button, Card, Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -21,7 +22,7 @@ function OurProducts() {
               <Card.Img
                 variant="top"
                 className="mt-3"
-                src="double_door_img.jpg"
+                src={DOUBLE_DOOR_IMG}
                 style={{
                   height: '250px',
                   objectFit: 'contain',
@@ -40,7 +41,7 @@ function OurProducts() {
               <Card.Img
                 variant="top"
                 className="mt-3"
-                src="single_door_img.jpg"
+                src={SINGLE_DOOR_IMG}
                 style={{
                   height: '250px',
                   objectFit: 'contain',
@@ -59,7 +60,7 @@ function OurProducts() {
               <Card.Img
                 variant="top"
                 className="mt-3"
-                src="upright_freezer_img.jpg"
+                src={UPRIGHT_FREEZER_IMG}
                 style={{
                   height: '250px',
                   objectFit: 'contain',
@@ -77,7 +78,7 @@ function OurProducts() {
               <Card className="h-100 border-0 shadow-sm overflow-hidden">
                 <Card.Img
                   variant="top"
-                  src="gvc_1350.png"
+                  src="https://res.cloudinary.com/dznlq0as1/image/upload/q_auto,f_auto/v1778748833/gvc_1350_rm6tyz.png"
                   style={{ height: '250px', objectFit: 'cover' }}
                 />
                 <Card.Body className="text-center p-4">

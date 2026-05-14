@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LOGO_NO_BG } from '../constants/images';
 import { Navbar as BSNavbar, Nav, Button } from 'react-bootstrap';
 import { NavLink, useLocation, Link } from 'react-router-dom';
 import {
@@ -28,7 +29,7 @@ function Navbar() {
       {/* Logo */}
       <BSNavbar.Brand as={NavLink} to="/">
         <img
-          src="/Logo_no_bg.png"
+          src={LOGO_NO_BG}
           alt="Cool House Trading"
           style={{ height: '70px' }}
         />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { WHO_WE_ARE } from '../constants/images';
 import { FaLeaf, FaChartLine, FaShieldAlt } from 'react-icons/fa';
 import { FaMicrochip } from 'react-icons/fa6';
 import { Button, Card, Row, Col, Container } from 'react-bootstrap';
@@ -57,7 +58,7 @@ function Overview() {
             <Col lg={1}></Col>
             <Col lg={5}>
               <img
-                src="who_we_are.png"
+                src={WHO_WE_ARE}
                 alt="Who We are"
                 className="img-fluid rounded-4 shadow"
               />

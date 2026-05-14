@@ -1,3 +1,4 @@
+import { WHO_WE_ARE, HERO } from '../constants/images';
 import PageHero from '../components/Hero';
 import DecadesOfExcellence from '../components/DecadesOfExcellence';
 import MarketOpurtunity from '../components/MarketOppurtunity';
@@ -16,7 +17,7 @@ function About() {
       className="section d-flex flex-column justify-content-center p-0"
       style={{ backgroundColor: 'var(--bg-light)', overflowX: 'clip' }}
     >
-      <PageHero title="About Us" backgroundImage="/hero.jpg" />
+      <PageHero title="About Us" backgroundImage={HERO} />
 
       <Container fluid className="p-0 mt-5">
         <Row className="align-items-center mb-5 g-4 px-4 px-md-5 ">
@@ -77,7 +78,7 @@ function About() {
           </Col>
           <Col lg={6} className="text-center mt-4 mt-lg-0">
             <img
-              src="who_we_are.png"
+              src={WHO_WE_ARE}
               alt="About Us"
               className="img-fluid rounded-4 shadow"
               style={{ maxHeight: '450px', objectFit: 'cover' }}
