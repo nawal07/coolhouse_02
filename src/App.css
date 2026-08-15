@@ -1,5 +1,5 @@
 /* Cool house Theme - Import Google Fonts if needed */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap');
 
 html,
 body,
@@ -154,7 +154,7 @@ h6 {
 }
 
 .navbar .get-started-btn {
-  margin-left: 1.5rem;
+  margin-inline-start: 1.5rem;
 }
 
 /* Snowflake accent decoration if wanted */
@@ -162,8 +162,103 @@ h6 {
   content: '❆';
   color: var(--primary-cool);
   font-size: 3rem;
-  margin-right: 12px;
+  margin-inline-end: 12px;
   vertical-align: middle;
+}
+
+/* Language toggle — top-right for English, top-left for Arabic */
+.lang-toggle-btn {
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  z-index: 1051;
+  background: #ffffff;
+  border: 1px solid rgba(17, 31, 90, 0.15);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111f5a;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lang-toggle-btn:hover {
+  border-color: var(--primary-cool);
+  background: #f0f9ff;
+}
+
+html[dir='rtl'] .lang-toggle-btn {
+  right: auto;
+  left: 12px;
+}
+
+@media (max-width: 575.98px) {
+  .lang-toggle-btn {
+    top: 6px;
+    right: 12px;
+    padding: 3px 8px;
+    font-size: 0.7rem;
+  }
+
+  html[dir='rtl'] .lang-toggle-btn {
+    right: auto;
+    left: 12px;
+  }
+}
+
+/* ─────────────────────────────────────── */
+/* RTL (Arabic) adjustments                */
+/* ─────────────────────────────────────── */
+
+html[dir='rtl'] body,
+html[dir='rtl'] .lead,
+html[dir='rtl'] p,
+html[dir='rtl'] span,
+html[dir='rtl'] a,
+html[dir='rtl'] li,
+html[dir='rtl'] td,
+html[dir='rtl'] button,
+html[dir='rtl'] input,
+html[dir='rtl'] textarea {
+  font-family: 'Cairo', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html[dir='rtl'] h1,
+html[dir='rtl'] h2,
+html[dir='rtl'] h3,
+html[dir='rtl'] h4,
+html[dir='rtl'] h5,
+html[dir='rtl'] h6 {
+  font-family: 'Cairo', 'Poppins', sans-serif;
+}
+
+html[dir='rtl'] .dialog-arrow-right::after {
+  right: auto;
+  left: -15px;
+  border-left-color: transparent;
+  border-right-color: #0c3b82;
+}
+
+/* Both the LTR and RTL Bootstrap builds are loaded simultaneously (only one
+   enabled/disabled) so the RTL half only ever adds an override — it never
+   subtracts the LTR half's declarations. Since Bootstrap's RTL build mirrors
+   .carousel-control-prev/-next by setting the OPPOSITE physical property
+   (left vs right) rather than overriding the same one, both properties end
+   up applied at once: the control stretches full-width and both arrow icons
+   render stacked on top of each other. Reset the unused side explicitly. */
+html[dir='rtl'] .carousel-control-prev {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .carousel-control-next {
+  right: auto;
+  left: 0;
+}
+
+html[dir='rtl'] .breadcrumb-item:not(:last-child)::after {
+  content: ' < ';
 }
 
 .map-container {
@@ -679,9 +774,16 @@ h6 {
 /* Smooth Carousel Fade Transition         */
 /* ─────────────────────────────────────── */
 
-/* Extend the cross-fade duration from Bootstrap's default 0.6s → 1.2s */
+/* Extend the cross-fade duration from Bootstrap's default 0.6s → 1.2s.
+   Also neutralize float/negative-margin: those exist only to stack items
+   for the non-fade slide animation. Bootstrap's RTL build mirrors them to
+   float:right + margin-left:-100%, which — for a fade carousel that never
+   uses them for positioning — pushes the visible item a full container
+   width off-screen in RTL. Fade only needs opacity + normal block flow. */
 .carousel-fade .carousel-item {
   transition: opacity 1.2s ease !important;
+  float: none !important;
+  margin: 0 !important;
 }
 
 /* Ensure the outgoing active slide also fades smoothly */

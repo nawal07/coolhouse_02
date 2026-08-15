@@ -10,56 +10,52 @@ import TargetSegments from '../components/TargetSegments';
 import OurPartners from '../components/OurPartners';
 import FutureAndSustainability from '../components/FutureAndSustainability';
 import ExportsMap from '../components/ExportsMap';
+import Seo from '../components/Seo';
+import { buildBreadcrumbJsonLd } from '../constants/seo';
+import { useLanguage } from '../i18n/LanguageContext';
+import RichText from '../i18n/RichText';
 
 function About() {
+  const { t } = useLanguage();
+  const a = t.about;
+  const ABOUT_JSON_LD = buildBreadcrumbJsonLd([
+    { name: t.nav.home, path: '/' },
+    { name: a.pageTitle, path: '/about' },
+  ]);
+
   return (
     <div
       className="section d-flex flex-column justify-content-center p-0"
       style={{ backgroundColor: 'var(--bg-light)', overflowX: 'clip' }}
     >
-      <PageHero title="About Us" backgroundImage={HERO} />
+      <Seo title={a.seo.title} description={a.seo.description} jsonLd={ABOUT_JSON_LD} />
+      <PageHero title={a.pageTitle} backgroundImage={HERO} />
 
       <Container fluid className="p-0 mt-5">
         <Row className="align-items-center mb-5 g-4 px-4 px-md-5 ">
           <Col lg={6}>
             <p className="text-uppercase fw-semibold mb-2" style={{ color: '#40c4ff', letterSpacing: '2px', fontSize: '0.85rem' }}>
-              Established 1960
+              {a.established}
             </p>
 
             <h2 className="fw-bold mb-3" style={{ color: '#111f5a', fontSize: '2rem', lineHeight: '1.2' }}>
-              General Deluxe –{' '}
-              <span style={{ color: '#40c4ff' }}>Proven Track Records</span>
+              {a.headline}
+              <span style={{ color: '#40c4ff' }}>{a.headlineAccent}</span>
             </h2>
 
             <p className="lead text-muted mb-4" style={{ fontSize: '1.05rem', fontStyle: 'italic' }}>
-              Our trusted associate has decades of proven excellence in Electrical appliances and refrigeration.
+              {a.lead}
             </p>
 
             <p className="mb-4">
-              Cool House Trading is the official trading partner and authorized distributor of{' '}
-              <strong>General Deluxe (M. Abu Haltam Group for Investment)</strong>, a leading Jordanian
-              manufacturer of premium refrigeration solutions. We bring both{' '}
-              <strong>commercial refrigeration equipment</strong> and{' '}
-              <strong>home appliances</strong> to the Middle East market with unmatched quality and
-              reliability, with a strong focus on Saudi Arabia.
+              <RichText text={a.para1} />
             </p>
 
             <p className="mb-4">
-              <strong>General Deluxe</strong> is one of the leading manufacturers in the Middle East,
-              producing household and commercial electrical appliances in Jordan such as refrigerators,
-              freezers, washing machines, A/C units, and upright freezers and fridges. General Deluxe's
-              network has been expanded to cover Middle East, European, and African markets. Currently,
-              we are exporting General Deluxe domestic and commercial products to countries like Saudi
-              Arabia, Iraq, Egypt, Syria, Lebanon, Ghana, Tunisia, Algeria, Central Africa, and Cyprus.
+              <RichText text={a.para2} />
             </p>
 
-            <p className="mb-4">
-              We are proud to be affiliated with the Jordan-based manufacturer behind General Deluxe,
-              a globally respected name in high-quality upright fridges, freezers, and commercial cooling
-              equipment. With decades of expertise from our manufacturing partner, we bring certified,
-              energy-efficient, and durable products to food and non-food industries and sectors across
-              the kingdom.
-            </p>
+            <p className="mb-4">{a.para3}</p>
 
             <Button
               variant="primary"
@@ -73,13 +69,13 @@ function About() {
               as={Link}
               to="/contact"
             >
-              Contact Our Team
+              {a.ctaBtn}
             </Button>
           </Col>
           <Col lg={6} className="text-center mt-4 mt-lg-0">
             <img
               src={WHO_WE_ARE}
-              alt="About Us"
+              alt={a.pageTitle}
               className="img-fluid rounded-4 shadow"
               style={{ maxHeight: '450px', objectFit: 'cover' }}
             />

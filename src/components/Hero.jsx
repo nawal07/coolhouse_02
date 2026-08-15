@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function PageHero({ title, backgroundImage = '/images/hero.jpg' }) {
+  const { t } = useLanguage();
   const bgStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url(${backgroundImage})`,
     backgroundSize: 'cover',
@@ -31,7 +33,7 @@ function PageHero({ title, backgroundImage = '/images/hero.jpg' }) {
                 to="/"
                 className="breadcrumb-home text-white text-decoration-none fw-medium"
               >
-                Home
+                {t.nav.home}
               </Link>
             </li>
             <li

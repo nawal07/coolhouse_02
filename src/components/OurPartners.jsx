@@ -1,7 +1,11 @@
 import React from 'react';
 import { PARTNER_LOGOS } from '../constants/images';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function OurPartners() {
+  const { t } = useLanguage();
+  const { heading, quote } = t.about.ourPartners;
+
   return (
     <section className="py-5 py-md-5 overflow-hidden border-top">
       <div className="container">
@@ -10,7 +14,7 @@ function OurPartners() {
             className="display-5 display-md-3 fw-bold mb-3"
             style={{ color: '#111f5a' }}
           >
-            "Our Esteemed B2B Partners and Key Accounts"
+            "{heading}"
           </h2>
           <div
             className="w-50 w-md-25 mx-auto border-bottom border-3 border-navy mt-5"
@@ -278,10 +282,7 @@ function OurPartners() {
         </div>
 
         <div className="text-center mt-4 mt-md-5">
-          <p className="lead fst-italic text-muted">
-            “Trusted by global brands and leading regional retailers to deliver
-            consistent cooling performance and reliability.”
-          </p>
+          <p className="lead fst-italic text-muted">"{quote}"</p>
         </div>
       </div>
     </section>

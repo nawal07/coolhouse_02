@@ -8,10 +8,12 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from 'react-icons/fa';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function Navbar() {
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
+  const { t, language, toggleLanguage } = useLanguage();
 
   // Auto-close menu when route changes (user clicks a link)
   React.useEffect(() => {
@@ -26,11 +28,24 @@ function Navbar() {
       expanded={expanded}
       onToggle={() => setExpanded(!expanded)}
     >
+      {/* Language toggle — pinned to the visual top-right corner regardless of language direction.
+          Shows the language you'd switch TO, not the current one. */}
+      <button
+        type="button"
+        className="lang-toggle-btn"
+        onClick={toggleLanguage}
+        aria-label={
+          language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'
+        }
+      >
+        {language === 'en' ? 'العربية' : 'English'}
+      </button>
+
       {/* Logo */}
       <BSNavbar.Brand as={NavLink} to="/">
         <img
           src={LOGO_NO_BG}
-          alt="Cool House Trading"
+          alt={t.brand.name}
           style={{ height: '70px' }}
         />
       </BSNavbar.Brand>
@@ -49,7 +64,7 @@ function Navbar() {
             className="px-3 py-2"
             onClick={() => setExpanded(false)}
           >
-            Home
+            {t.nav.home}
           </Nav.Link>
           <Nav.Link
             as={NavLink}
@@ -57,7 +72,7 @@ function Navbar() {
             className="px-3 py-2"
             onClick={() => setExpanded(false)}
           >
-            About
+            {t.nav.about}
           </Nav.Link>
           <Nav.Link
             as={NavLink}
@@ -65,7 +80,7 @@ function Navbar() {
             className="px-3 py-2"
             onClick={() => setExpanded(false)}
           >
-            Products
+            {t.nav.products}
           </Nav.Link>
           <Nav.Link
             as={NavLink}
@@ -73,7 +88,7 @@ function Navbar() {
             className="px-3 py-2"
             onClick={() => setExpanded(false)}
           >
-            Contact
+            {t.nav.contact}
           </Nav.Link>
         </Nav>
 
@@ -85,7 +100,7 @@ function Navbar() {
             as={Link}
             to="/contact"
           >
-            Get Started
+            {t.nav.getStarted}
           </Button>
         </div>
 

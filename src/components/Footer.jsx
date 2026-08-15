@@ -11,8 +11,10 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from 'react-icons/fa';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function Footer() {
+  const { t } = useLanguage();
   return (
     <footer
       style={{ backgroundColor: '#0D1B2A', color: '#E3F2FD' }}
@@ -21,10 +23,8 @@ function Footer() {
       <div className="container">
         <div className="row border-bottom pb-2">
           <div className="col-md-3">
-            <img className="" src={LOGO_3_NO_BG} alt="Cool House" />
-            <p className="mt-3">
-              Premium commercial refrigeration solutions for modern businesses.
-            </p>
+            <img className="" src={LOGO_3_NO_BG} alt={t.brand.name} />
+            <p className="mt-3">{t.footer.tagline}</p>
             <div className="d-flex gap-4 mt-4 mb-5">
               <a
                 href="https://facebook.com/"
@@ -62,32 +62,32 @@ function Footer() {
           </div>
           <div className="col-md-2"></div>
           <div className="col-md-3 mt-4">
-            <h5 className="mb-4">Quick Links</h5>
+            <h5 className="mb-4">{t.footer.quickLinks}</h5>
             <ul style={{ listStyleType: 'none', padding: 0 }}>
               <li className="mb-2">
                 <Link className="links" to="/">
-                  Home
+                  {t.nav.home}
                 </Link>
               </li>
               <li className="mb-2">
                 <Link className="links" to="/about">
-                  About
+                  {t.nav.about}
                 </Link>
               </li>
               <li className="mb-2">
                 <Link className="links" to="/products">
-                  Products
+                  {t.nav.products}
                 </Link>
               </li>
               <li className="mb-2">
                 <Link className="links" to="/contact">
-                  Contact
+                  {t.nav.contact}
                 </Link>
               </li>
             </ul>
           </div>
           <div className="col-md-3 mt-4">
-            <h5 className="mb-4">Contact Us</h5>
+            <h5 className="mb-4">{t.footer.contactUs}</h5>
             <p className="d-flex align-items-center gap-3">
               <FaPhoneAlt />
               <a
@@ -119,13 +119,11 @@ function Footer() {
               </a>
             </p>
             <p className="d-flex align-items-center gap-3 text-white ">
-              <FaMapMarkerAlt /> Al Malaz , Saudi Arabia
+              <FaMapMarkerAlt /> {t.footer.addressLine}
             </p>
           </div>
         </div>
-        <p className="text-center pt-4 ">
-          Copyright © 2025 COOL HOUSE. All rights reserved.
-        </p>
+        <p className="text-center pt-4 ">{t.footer.copyright}</p>
       </div>
     </footer>
   );

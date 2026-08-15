@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { LOGO_3_NO_BG } from '../constants/images';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function PageLoader() {
+  const { t } = useLanguage();
   const [fadeOut, setFadeOut] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -36,7 +39,7 @@ function PageLoader() {
     >
       {/* Logo */}
       <img
-        src="/Logo_3_no_bg.png"
+        src={LOGO_3_NO_BG}
         alt="Cool House"
         style={{
           height: '90px',
@@ -72,7 +75,7 @@ function PageLoader() {
           animation: 'loaderFadeText 1.4s ease forwards',
         }}
       >
-        Loading Cool House...
+        {t.pageLoader.tagline}
       </p>
 
       <style>{`

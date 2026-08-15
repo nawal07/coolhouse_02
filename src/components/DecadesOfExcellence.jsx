@@ -3,8 +3,12 @@ import CountUp from 'react-countup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function DecadesOfExcellence() {
+  const { t } = useLanguage();
+  const { heading, subheading, tagline, timeline, counters } = t.home.decades;
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -46,13 +50,13 @@ function DecadesOfExcellence() {
         <Container>
           <div className="text-center mb-5">
             <h2 className="display-5 fw-bold" style={{ color: '#0d47a1' }}>
-              DECADES OF EXCELLENCE
+              {heading}
             </h2>
             <p className="lead fw-medium" style={{ color: '#092f67' }}>
-              The Legacy of General Deluxe – Our Trusted Manufacturing Partner
+              {subheading}
             </p>
             <p className="lead" style={{ color: '#0000000' }}>
-              EVOLUTION SINCE 1960
+              {tagline}
             </p>
           </div>
 
@@ -64,113 +68,48 @@ function DecadesOfExcellence() {
             {/* Vertical Center Line */}
             <div className="timeline-line position-absolute top-0 bottom-0 start-50 translate-middle-x rounded"></div>
 
-            {/* 1960 - Right Side */}
-            <div
-              className="timeline-item mb-5"
-              data-aos="fade-right"
-              data-aos-mirror="true"
-              data-aos-once="false"
-            >
-              <div className="row align-items-center">
-                <div className="col-lg-6 text-end pe-5">
-                  <div className="dialog-box text-white p-4 rounded-4 position-relative">
-                    <h5 className="fw-bold mb-2">Founding</h5>
-                    <p className="mb-0 small">
-                      Established by Mr. M. Abu Haltam as a premier importer of
-                      high-end German, Italian, and Korean appliances.
-                    </p>
-                    <div className="dialog-arrow-right"></div>
+            {timeline.map((item, i) => (
+              <div
+                key={item.year}
+                className={i < timeline.length - 1 ? 'timeline-item mb-5' : 'timeline-item'}
+                data-aos="fade-right"
+                data-aos-mirror="true"
+                data-aos-once="false"
+              >
+                <div className="row align-items-center">
+                  <div className="col-lg-6 text-end pe-5">
+                    <div className="dialog-box text-white p-4 rounded-4 position-relative">
+                      <h5 className="fw-bold mb-2">{item.title}</h5>
+                      <p className="mb-0 small">{item.desc}</p>
+                      <div className="dialog-arrow-right"></div>
+                    </div>
+                  </div>
+                  <div className="dialog-year col-lg-1">
+                    <div className="timeline-circle mx-auto">{item.year}</div>
                   </div>
                 </div>
-                <div className="dialog-year col-lg-1">
-                  <div className="timeline-circle mx-auto">1960</div>
-                </div>
               </div>
-            </div>
-
-            {/* 1960 - Right Side */}
-            <div
-              className="timeline-item mb-5"
-              data-aos="fade-right"
-              data-aos-mirror="true"
-              data-aos-once="false"
-            >
-              <div className="row align-items-center">
-                <div className="col-lg-6 text-end pe-5">
-                  <div className="dialog-box text-white p-4 rounded-4 position-relative">
-                    <h5 className="fw-bold mb-2">Manufacturing Transition</h5>
-                    <p className="mb-0 small">
-                      Established advanced production capabilities in
-                      collaboration with global technology partners.
-                    </p>
-                    <div className="dialog-arrow-right"></div>
-                  </div>
-                </div>
-                <div className="dialog-year col-lg-1">
-                  <div className="timeline-circle mx-auto">1990</div>
-                </div>
-              </div>
-            </div>
-
-            {/* 2026 - Right Side */}
-            <div
-              className="timeline-item"
-              data-aos="fade-right"
-              data-aos-mirror="true"
-              data-aos-once="false"
-            >
-              <div className="row align-items-center">
-                <div className="col-lg-6 text-end pe-5">
-                  <div className="dialog-box text-white p-4 rounded-4 position-relative">
-                    <h5 className="fw-bold mb-2">Regional Leadership</h5>
-                    <p className="mb-0 small">
-                      Fully integrated manufacturing operation with an annual
-                      production capacity of 300,000 units.
-                    </p>
-                    <div className="dialog-arrow-right"></div>
-                  </div>
-                </div>
-                <div className="dialog-year col-lg-1">
-                  <div className="timeline-circle mx-auto">2026</div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Animated Counters */}
           <div className="mt-5 pt-5 text-center">
             <Row className="g-4 justify-content-center">
-              <Col xs={12} sm={6} md={4} lg={3}>
-                <div className="counter-item p-4">
-                  <h3 className="fw-bold display-5 mb-1">
-                    {countersStarted ? (
-                      <CountUp end={300} duration={3} separator="," />
-                    ) : (
-                      '0'
-                    )}
-                    K
-                  </h3>
-                  <p className="text-muted fw-medium fs-5">ANNUAL UNITS</p>
-                </div>
-              </Col>
-
-              <Col xs={12} sm={6} md={4} lg={3}>
-                <div className="counter-item p-4">
-                  <h3 className="fw-bold display-5 mb-1">
-                    {countersStarted ? <CountUp end={10} duration={3} /> : '0'}+
-                  </h3>
-                  <p className="text-muted fw-medium fs-5">EXPORT MARKETS</p>
-                </div>
-              </Col>
-
-              <Col xs={12} sm={6} md={4} lg={3}>
-                <div className="counter-item p-4">
-                  <h3 className="fw-bold display-5 mb-1">
-                    {countersStarted ? <CountUp end={60} duration={3} /> : '0'}+
-                  </h3>
-                  <p className="text-muted fw-medium fs-5">YEARS LEGACY</p>
-                </div>
-              </Col>
+              {counters.map(counter => (
+                <Col xs={12} sm={6} md={4} lg={3} key={counter.label}>
+                  <div className="counter-item p-4">
+                    <h3 className="fw-bold display-5 mb-1">
+                      {countersStarted ? (
+                        <CountUp end={counter.end} duration={3} separator="," />
+                      ) : (
+                        '0'
+                      )}
+                      {counter.suffix}
+                    </h3>
+                    <p className="text-muted fw-medium fs-5">{counter.label}</p>
+                  </div>
+                </Col>
+              ))}
             </Row>
           </div>
         </Container>

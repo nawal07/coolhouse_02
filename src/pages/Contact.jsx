@@ -1,14 +1,46 @@
 import React, { useState } from 'react';
+import { HERO } from '../constants/images';
 import PageHero from '../components/Hero';
-import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Card, Alert } from 'react-bootstrap';
 import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
 } from 'react-icons/fa';
+import Seo from '../components/Seo';
+import { buildBreadcrumbJsonLd } from '../constants/seo';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function Contact() {
+  const { t } = useLanguage();
+  const c = t.contact;
+
+  const CONTACT_JSON_LD = [
+    buildBreadcrumbJsonLd([
+      { name: t.nav.home, path: '/' },
+      { name: c.pageTitle, path: '/contact' },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Cool House Trading',
+      telephone: '+966540008457',
+      email: 'info@coolhousetrading.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Building No. 4317, Ibn Shaddad',
+        addressLocality: 'Al Malaz, Riyadh',
+        addressCountry: 'SA',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 24.665688,
+        longitude: 46.729353,
+      },
+    },
+  ];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,14 +60,14 @@ function Contact() {
     const whatsappNumber = '+966594869891';
 
     const message = [
-      'New Inquiry from Website!',
+      c.whatsapp.newInquiry,
       '',
-      `Name: ${formData.name}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone}`,
-      `Subject: ${formData.subject || 'General Inquiry From Website'}`,
+      `${c.whatsapp.nameLabel} ${formData.name}`,
+      `${c.whatsapp.emailLabel} ${formData.email}`,
+      `${c.whatsapp.phoneLabel} ${formData.phone}`,
+      `${c.whatsapp.subjectLabel} ${formData.subject || c.whatsapp.generalInquiry}`,
       '',
-      'Message:',
+      c.whatsapp.messageLabel,
       formData.message,
     ].join('\n');
 
@@ -55,40 +87,35 @@ function Contact() {
 
   return (
     <div className="mt-5" style={{ backgroundColor: 'var(--bg-light)' }}>
+      <Seo title={c.seo.title} description={c.seo.description} jsonLd={CONTACT_JSON_LD} />
       <PageHero
-        title="Contact Us"
-        backgroundImage="/hero.jpg" // or any other image
+        title={c.pageTitle}
+        backgroundImage={HERO} // or any other image
       />
       <Container fluid className="px-4 px-md-5">
-        <div className="text-center mb-5 mt-5">
-          {/* <h1 className="snowflake-accent display-5 fw-bold">Contact Us</h1> */}
-        </div>
+        <div className="text-center mb-5 mt-5"></div>
 
         <Row className="g-4 contact-row">
           <Col lg={5}>
             <Card className="p-4 h-100 shadow-sm border-0">
-              <h1 className="mb-4" style={{ color: '#111f5a' }}>
-                Get In Touch
-              </h1>
-              <p className="text-muted">
-                Have questions about our commercial refrigeration systems? Our
-                team is ready to assist you with product details, pricing, and
-                custom solutions.
+              <h2 className="mb-4" style={{ color: '#111f5a' }}>
+                {c.getInTouch}
+              </h2>
+              <p className="text-muted">{c.intro}</p>
+              <p>
+                <strong>{c.phoneLabel}</strong> +966 54 000 8457
               </p>
               <p>
-                <strong>Phone:</strong> +966 54 000 8457
+                <strong>{c.emailLabel}</strong> info@coolhousetrading.com
               </p>
               <p>
-                <strong>Email:</strong> info@coolhousetrading.com
-              </p>
-              <p>
-                <strong>Address:</strong> Building No. 4317, Ibn Shaddad,
+                <strong>{c.addressLabel}</strong> Building No. 4317, Ibn Shaddad,
                 <br />
                 Al Malaz, Riyadh
               </p>
 
               <div className="mt-4">
-                <h5>Follow Us</h5>
+                <h5>{c.followUs}</h5>
                 <div className="d-flex gap-3">
                   <a
                     href="https://facebook.com/"
@@ -130,15 +157,13 @@ function Contact() {
           <Col lg={7}>
             <Card className="p-4 shadow-sm border-0">
               {submitted && (
-                <Alert variant="success">
-                  Message sent to WhatsApp! Our team will reply shortly.
-                </Alert>
+                <Alert variant="success">{c.form.successAlert}</Alert>
               )}
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label>Full Name</Form.Label>
+                      <Form.Label>{c.form.fullName}</Form.Label>
                       <Form.Control
                         type="text"
                         name="name"
@@ -151,7 +176,7 @@ function Contact() {
                   </Col>
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label>Email</Form.Label>
+                      <Form.Label>{c.form.email}</Form.Label>
                       <Form.Control
                         type="email"
                         name="email"
@@ -166,7 +191,7 @@ function Contact() {
                 <Row>
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label>Phone</Form.Label>
+                      <Form.Label>{c.form.phone}</Form.Label>
                       <Form.Control
                         type="tel"
                         name="phone"
@@ -177,7 +202,7 @@ function Contact() {
                   </Col>
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label>Subject</Form.Label>
+                      <Form.Label>{c.form.subject}</Form.Label>
                       <Form.Control
                         type="text"
                         name="subject"
@@ -189,7 +214,7 @@ function Contact() {
                 </Row>
 
                 <Form.Group className="mb-4">
-                  <Form.Label>Message</Form.Label>
+                  <Form.Label>{c.form.message}</Form.Label>
                   <Form.Control
                     as="textarea"
                     rows={5}
@@ -206,7 +231,7 @@ function Contact() {
                   size="lg"
                   className="w-100"
                 >
-                  Send Message
+                  {c.form.send}
                 </Button>
               </Form>
             </Card>
@@ -219,7 +244,7 @@ function Contact() {
           className="text-center mb-4 fw-bold"
           style={{ color: 'var(--primary-bold)' }}
         >
-          Find Us in Al Malaz, Riyadh
+          {c.findUs}
         </h4>
 
         <div
@@ -236,7 +261,7 @@ function Contact() {
             height="100%"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Map of Al Malaz District, Riyadh"
+            title={c.mapTitle}
           ></iframe>
         </div>
       </div>

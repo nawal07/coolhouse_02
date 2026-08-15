@@ -1,64 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { HERO_1, HERO_2, HERO_3, HERO_4 } from '../constants/images';
 import { Carousel, Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
 
-const slides = [
-  {
-    image: HERO_1,
-    title: 'General Deluxe Upright Fridges & Freezers.',
-    desc: 'Premium commercial refrigeration solutions for modern businesses — distributed by Cool House Trading.',
-  },
-  {
-    image: HERO_2,
-    title: 'The Future of Cooling Solutions.',
-    desc: 'Leading the Future of Commercial Refrigeration & Home Appliances in the Middle East.',
-  },
-  {
-    image: HERO_3,
-    title: 'Your Partner in Cooling and Comfort.',
-    desc: 'Trusted Commercial Refrigeration Solutions for Modern Businesses & Home Comfort Across the Region',
-  },
-  {
-    image: HERO_4,
-    title: 'Your Partner in Cooling and Comfort.',
-    desc: 'Trusted Commercial Refrigeration Solutions for Modern Businesses & Home Comfort Across the Region',
-  },
-];
+const SLIDE_IMAGES = [HERO_1, HERO_2, HERO_3, HERO_4];
 
 function HeroSection() {
-  const [ready, setReady] = useState(false);
-
-  // Preload every image before rendering the carousel
-  useEffect(() => {
-    let loaded = 0;
-    const total = slides.length;
-
-    slides.forEach(slide => {
-      const img = new Image();
-      img.src = slide.image;
-      const next = () => {
-        loaded += 1;
-        if (loaded >= total) setReady(true);
-      };
-      img.onload = next;
-      img.onerror = next; // don't block on broken images
-    });
-  }, []);
-
-  // Skeleton shimmer while images are preloading
-  if (!ready) {
-    return (
-      <div
-        className="skeleton-shimmer"
-        style={{ minHeight: '85vh', width: '100%' }}
-      />
-    );
-  }
+  const { t, language } = useLanguage();
+  const slides = t.home.hero.slides.map((slide, i) => ({
+    ...slide,
+    image: SLIDE_IMAGES[i],
+  }));
 
   return (
     <div style={{ animation: 'pageFadeIn 0.6s ease forwards', opacity: 0 }}>
-      <Carousel fade interval={3500} indicators controls>
+      {/*
+        key={language} forces a full remount when the language toggles.
+        Without it, react-bootstrap's fade transition can be left mid-flight
+        (stuck with its transitional carousel-item-start/-end class), which
+        keeps the base (non-fade) float/negative-margin rule in effect and
+        shoves the slide a full viewport-width off-screen — invisible in
+        both languages, but only surfacing right when new content swaps in.
+      */}
+      <Carousel key={language} fade interval={3500} indicators controls>
         {slides.map((slide, i) => (
           <Carousel.Item key={i}>
             {/*
@@ -70,11 +35,13 @@ function HeroSection() {
               className="hero hero-slide text-center text-white d-flex align-items-center justify-content-center"
               style={{ position: 'relative', overflow: 'hidden' }}
             >
-              {/* Background image — loaded eagerly before render */}
+              {/* Background image — first slide loads eagerly for LCP, the rest lazily */}
               <img
                 src={slide.image}
                 alt=""
                 aria-hidden="true"
+                loading={i === 0 ? 'eager' : 'lazy'}
+                fetchPriority={i === 0 ? 'high' : 'auto'}
                 style={{
                   position: 'absolute',
                   inset: 0,
@@ -99,9 +66,9 @@ function HeroSection() {
 
               {/* Text content */}
               <Container fluid style={{ position: 'relative', zIndex: 2 }}>
-                <h1 className="snowflake-accent display-4 mb-4 hero-title">
+                <h2 className="snowflake-accent display-4 mb-4 hero-title">
                   {slide.title}
-                </h1>
+                </h2>
                 <p className="lead mb-4 hero-desc">{slide.desc}</p>
                 <div className="btn-group-single">
                   <Button
@@ -118,23 +85,23 @@ function HeroSection() {
                     as={Link}
                     to="/products"
                   >
-                    Our Products
+                    {t.home.hero.btnProducts}
                   </Button>
                   <Button
-                    variant="outline-primary"
+                    variant="primary"
                     size="lg"
                     as={Link}
                     to="/contact"
                     style={{
-                      color: '#ffffff',
-                      borderColor: '#ffffff',
+                      backgroundColor: '#111f5a',
+                      borderColor: '#111f5a',
                       borderRadius: '10px',
                       fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                       minWidth: '150px',
                     }}
                     className="btn-contact"
                   >
-                    Contact Us
+                    {t.home.hero.btnContact}
                   </Button>
                 </div>
               </Container>

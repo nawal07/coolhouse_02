@@ -1,8 +1,12 @@
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import { FaBullseye, FaEye } from 'react-icons/fa6';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function MissionAndVision() {
+  const { t } = useLanguage();
+  const { heading, vision, mission } = t.about.missionVision;
+
   return (
     <>
       <div className="px-4 px-md-5 ">
@@ -11,7 +15,7 @@ function MissionAndVision() {
             className="display-6 fw-bold mt-4 mb-2"
             style={{ color: '#111f5a' }}
           >
-            Our Vision & Mission
+            {heading}
           </h2>
         </div>
 
@@ -27,13 +31,10 @@ function MissionAndVision() {
                   <FaEye />
                 </div>
                 <Card.Title className="fw-bold fs-3 mb-4">
-                  Our Vision
+                  {vision.title}
                 </Card.Title>
                 <Card.Text className="fs-5 text-muted lh-lg">
-                  To become a trusted regional leader in commercial
-                  refrigeration and home appliance solutions, driven by
-                  innovation, quality engineering, and sustainable growth -
-                  supporting businesses and improving quality of life
+                  {vision.text}
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -50,12 +51,10 @@ function MissionAndVision() {
                   <FaBullseye />
                 </div>
                 <Card.Title className="fw-bold fs-3 mb-4">
-                  Our Mission
+                  {mission.title}
                 </Card.Title>
                 <Card.Text className="fs-5 text-muted lh-lg">
-                  To deliver high-quality, safe, and reliable refrigeration and
-                  appliance solutions that meet evolving customer needs while
-                  ensuring operational efficiency and regulatory compliance.
+                  {mission.text}
                 </Card.Text>
               </Card.Body>
             </Card>
