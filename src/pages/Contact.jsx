@@ -103,7 +103,7 @@ function Contact() {
               </h2>
               <p className="text-muted">{c.intro}</p>
               <p>
-                <strong>{c.phoneLabel}</strong> <span dir="ltr">+966 54 000 8457</span>
+                <strong>{c.phoneLabel}</strong> <span dir="ltr"> 966 54 000 8457 </span>+
               </p>
               <p>
                 <strong>{c.emailLabel}</strong> info@coolhousetrading.com
