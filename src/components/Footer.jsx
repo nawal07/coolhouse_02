@@ -105,6 +105,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-decoration-none text-white hover-text-primary"
+                dir="ltr"
               >
                 +966 54 000 8457
               </a>
