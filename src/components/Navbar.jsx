@@ -28,19 +28,6 @@ function Navbar() {
       expanded={expanded}
       onToggle={() => setExpanded(!expanded)}
     >
-      {/* Language toggle — pinned to the visual top-right corner regardless of language direction.
-          Shows the language you'd switch TO, not the current one. */}
-      <button
-        type="button"
-        className="lang-toggle-btn"
-        onClick={toggleLanguage}
-        aria-label={
-          language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'
-        }
-      >
-        {language === 'en' ? 'العربية' : 'English'}
-      </button>
-
       {/* Logo */}
       <BSNavbar.Brand as={NavLink} to="/">
         <img
@@ -50,8 +37,24 @@ function Navbar() {
         />
       </BSNavbar.Brand>
 
-      {/* Hamburger Toggle - No border */}
-      <BSNavbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />
+      {/* Mobile: language toggle sits beside the hamburger — left of it in English,
+          right of it in Arabic (flows naturally with dir="rtl" as it's the first
+          child in this flex group, same trick as the desktop toggle). */}
+      <div className="d-flex align-items-center gap-2">
+        <button
+          type="button"
+          className="lang-toggle-btn d-lg-none"
+          onClick={toggleLanguage}
+          aria-label={
+            language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'
+          }
+        >
+          {language === 'en' ? 'العربية' : 'English'}
+        </button>
+
+        {/* Hamburger Toggle - No border */}
+        <BSNavbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />
+      </div>
 
       {/* Collapsible content */}
       <BSNavbar.Collapse id="basic-navbar-nav">
@@ -92,8 +95,18 @@ function Navbar() {
           </Nav.Link>
         </Nav>
 
-        {/* Desktop: Get Started button (hidden on mobile) */}
-        <div className="d-none d-lg-block ms-lg-3">
+        {/* Desktop: language toggle + Get Started button (hidden on mobile) */}
+        <div className="d-none d-lg-flex align-items-center gap-3 ms-lg-3">
+          <button
+            type="button"
+            className="lang-toggle-btn"
+            onClick={toggleLanguage}
+            aria-label={
+              language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'
+            }
+          >
+            {language === 'en' ? 'العربية' : 'English'}
+          </button>
           <Button
             variant="warning"
             className="get-started-btn px-4 py-2"

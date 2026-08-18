@@ -299,6 +299,8 @@ export const en = {
     phoneLabel: 'Phone:',
     emailLabel: 'Email:',
     addressLabel: 'Address:',
+    addressStreet: 'Building No. 4317, Ibn Shaddad,',
+    addressCity: 'Al Malaz, Riyadh',
     followUs: 'Follow Us',
     form: {
       fullName: 'Full Name',

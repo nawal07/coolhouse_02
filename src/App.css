@@ -153,10 +153,6 @@ h6 {
   box-shadow: 0 8px 20px rgba(55, 123, 212, 0.35) !important;
 }
 
-.navbar .get-started-btn {
-  margin-inline-start: 1.5rem;
-}
-
 /* Snowflake accent decoration if wanted */
 .snowflake-accent::before {
   content: '❆';
@@ -166,12 +162,11 @@ h6 {
   vertical-align: middle;
 }
 
-/* Language toggle — top-right for English, top-left for Arabic */
+/* Language toggle — shared pill styling.
+   Desktop: sits inline to the left of "Get Started" in English, right in Arabic.
+   Mobile: sits inline to the left of the hamburger in English, right in Arabic.
+   Both flow naturally with dir="rtl" since it's the first child in its flex row. */
 .lang-toggle-btn {
-  position: absolute;
-  top: 4px;
-  right: 12px;
-  z-index: 1051;
   background: #ffffff;
   border: 1px solid rgba(17, 31, 90, 0.15);
   border-radius: 999px;
@@ -188,22 +183,10 @@ h6 {
   background: #f0f9ff;
 }
 
-html[dir='rtl'] .lang-toggle-btn {
-  right: auto;
-  left: 12px;
-}
-
 @media (max-width: 575.98px) {
   .lang-toggle-btn {
-    top: 6px;
-    right: 12px;
     padding: 3px 8px;
     font-size: 0.7rem;
-  }
-
-  html[dir='rtl'] .lang-toggle-btn {
-    right: auto;
-    left: 12px;
   }
 }
 

@@ -298,6 +298,8 @@ export const ar = {
     phoneLabel: 'الهاتف:',
     emailLabel: 'البريد الإلكتروني:',
     addressLabel: 'العنوان:',
+    addressStreet: 'مبنى رقم 4317، ابن شداد،',
+    addressCity: 'الملز، الرياض',
     followUs: 'تابعنا',
     form: {
       fullName: 'الاسم الكامل',

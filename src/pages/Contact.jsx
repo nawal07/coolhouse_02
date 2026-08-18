@@ -103,15 +103,15 @@ function Contact() {
               </h2>
               <p className="text-muted">{c.intro}</p>
               <p>
-                <strong>{c.phoneLabel}</strong> +966 54 000 8457
+                <strong>{c.phoneLabel}</strong> <span dir="ltr">+966 54 000 8457</span>
               </p>
               <p>
                 <strong>{c.emailLabel}</strong> info@coolhousetrading.com
               </p>
               <p>
-                <strong>{c.addressLabel}</strong> Building No. 4317, Ibn Shaddad,
+                <strong>{c.addressLabel}</strong> {c.addressStreet}
                 <br />
-                Al Malaz, Riyadh
+                {c.addressCity}
               </p>
 
               <div className="mt-4">
